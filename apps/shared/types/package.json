@@ -1,0 +1,35 @@
+{
+  "name": "@shared/types",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "codegen": "graphql-codegen --config codegen.yaml"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^7.2.0",
+    "@graphql-codegen/typescript": "^6.1.0",
+    "@graphql-codegen/typescript-mongodb": "^4.0.2",
+    "@graphql-codegen/typescript-operations": "^6.1.6",
+    "@graphql-codegen/typescript-react-apollo": "^4.4.2",
+    "@graphql-codegen/typescript-resolvers": "^6.1.0",
+    "@graphql-tools/load-files": "^7.0.1",
+    "@graphql-tools/schema": "^10.1.0",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@apollo/client": "^4.2.12",
+    "@apollo/server": "^5.5.1",
+    "@graphql-tools/merge": "^9.2.3",
+    "graphql": "catalog:",
+    "mongodb": "^7.5.0",
+    "mongoose": "^9.9.2"
+  }
+}

@@ -1,0 +1,111 @@
+.thread {
+	padding: 9px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	border-left: 3px solid transparent;
+	border-radius: 4px;
+	transition: background-color 0.4s ease-out, border-color 0.4s ease-out;
+
+	&--unread {
+		border-left-color: var(--ams-color-interactive, #004699);
+		background: rgba(0, 70, 153, 0.04);
+	}
+
+	.comment-item {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 9px;
+
+		&-left {
+			display: flex;
+			justify-content: space-between;
+
+			&-initials {
+				width: 24px;
+				height: 24px;
+				padding: 1px;
+				background: var(--ams-color-separator);
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				span {
+					font-size: 14px;
+					line-height: 14px;
+					color: var(--white);
+				}
+			}
+		}
+
+		&-content {
+			margin-top: 5px;
+			display: flex;
+			flex-direction: column;
+			gap: 9px;
+
+			&-header {
+				display: flex;
+				align-items: center;
+				gap: 9px;
+
+				span {
+					font-size: 14px;
+
+					&:first-of-type {
+						font-weight: 800;
+					}
+					&:nth-of-type(2) {
+						color: var(--ams-color-text-secondary);
+
+						&::first-letter {
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+
+			&-text {
+				font-size: 15.4px;
+				line-height: 23px;
+				overflow-wrap: break-word;
+				word-break: break-word;
+			}
+		}
+
+		&-nieuw-badge {
+			display: inline-flex;
+			align-items: center;
+			padding: 1px 6px;
+			border-radius: 3px;
+			background: var(--ams-color-interactive, #004699);
+			color: var(--white) !important;
+			font-size: 11px !important;
+			font-weight: 700 !important;
+			line-height: 16px;
+			white-space: nowrap;
+		}
+	}
+
+	button {
+		width: fit-content;
+		margin-top: 4px;
+	}
+
+	&-replies-list {
+		padding: 0 9px 9px 9px;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+
+		&-divider {
+			margin: 10px 0 20px 0;
+			width: 100%;
+			height: 1px;
+			background: var(--gray-10);
+		}
+	}
+}

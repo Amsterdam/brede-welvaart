@@ -1,0 +1,42 @@
+.project-questions-dialog {
+	&__fields {
+		display: flex;
+		flex-direction: column;
+		gap: var(--ams-space-l);
+		margin-top: var(--ams-space-l);
+
+		.ams-text-input,
+		.ams-text-area {
+			width: 100%;
+			box-sizing: border-box;
+		}
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: column;
+		gap: var(--ams-space-s);
+		align-self: flex-start;
+		width: 100%;
+		margin-top: var(--ams-space-s);
+
+		.ams-checkbox {
+			width: 100%;
+		}
+
+		// The app's legacy dialog rule styles every input as a text field.
+		// Restore the ADS checkbox input so only its checkbox icon is visible.
+		.ams-checkbox__input {
+			width: 0;
+			padding: 0;
+			border: 0;
+		}
+	}
+
+	&__reason {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		width: 100%;
+	}
+}

@@ -1,0 +1,137 @@
+// Tge html (:root) and body tags do not get a scope (data-v-... attribute). Which means the below
+// CSS declaration should also not be scoped. That means this .scss file should only be imported
+// from an unscoped style tag.
+
+html,
+body,
+button,
+input,
+textarea {
+	// We only fall back to monospace for debugging. In production we should fallback to Arial, and
+	// finally sans-serif.
+	// font-family: "AmsterdamSans", monospace; // for debugging
+	font-family: "AmsterdamSans", Arial, sans-serif; // for release
+	color: var(--black);
+}
+
+::placeholder,
+::-webkit-input-placeholder,
+:-ms-input-placeholder {
+	font-family: "AmsterdamSans", Arial, sans-serif;
+	color: var(--black);
+}
+
+// 300 Normal
+@font-face {
+	font-family: "AmsterdamSans_n3";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "AmsterdamSans";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Light.ttf");
+	src:
+		url("../../assets/fonts/ttf/AmsterdamSans-Light.ttf") format("truetype"),
+		url("../../assets/fonts/otf/AmsterdamSans-Light.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+// 400 Normal
+@font-face {
+	font-family: "AmsterdamSans_n4";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "AmsterdamSans";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Regular.ttf");
+	src:
+		url("../../assets/fonts/ttf/AmsterdamSans-Regular.ttf") format("truetype"),
+		url("../../assets/fonts/otf/AmsterdamSans-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+// 400 Italic
+@font-face {
+	font-family: "AmsterdamSans_i4";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Italic.ttf") format("truetype");
+}
+@font-face {
+	font-family: "AmsterdamSans";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Italic.ttf");
+	src:
+		url("../../assets/fonts/ttf/AmsterdamSans-Italic.ttf") format("truetype"),
+		url("../../assets/fonts/otf/AmsterdamSans-Italic.otf") format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+// 600 Normal
+@font-face {
+	font-family: "AmsterdamSans_n6";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "AmsterdamSans";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Bold.ttf");
+	src:
+		url("../../assets/fonts/ttf/AmsterdamSans-Bold.ttf") format("truetype"),
+		url("../../assets/fonts/otf/AmsterdamSans-Bold.otf") format("opentype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+// 600 Italic
+@font-face {
+	font-family: "AmsterdamSans_i6";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+	font-family: "AmsterdamSans";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-BoldItalic.ttf");
+	src:
+		url("../../assets/fonts/ttf/AmsterdamSans-BoldItalic.ttf") format("truetype"),
+		url("../../assets/fonts/otf/AmsterdamSans-BoldItalic.otf") format("opentype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+// 700 Normal
+@font-face {
+	font-family: "AmsterdamSans_n7";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "AmsterdamSans";
+	src: url("../../assets/fonts/ttf/AmsterdamSans-ExtraBold.ttf");
+	src:
+		url("../../assets/fonts/ttf/AmsterdamSans-ExtraBold.ttf") format("truetype"),
+		url("../../assets/fonts/otf/AmsterdamSans-ExtraBold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+h1 {
+	font-size: 80px;
+	line-height: 120px;
+}
+
+h2 {
+	font-size: 60px;
+	line-height: 90px;
+}
+
+h3 {
+	font-size: 44px;
+	line-height: 66px;
+}
+
+h4 {
+	font-size: 38px;
+	line-height: 57px;
+}
+
+h5 {
+	font-size: 30px;
+	line-height: 38px;
+}

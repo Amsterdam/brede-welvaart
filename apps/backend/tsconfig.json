@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "allowImportingTsExtensions": false,
+    "outDir": "./dist",
+    "types": ["node"],
+    "composite": true,
+    "paths": {
+      "@shared/types": ["../shared/types/src"],
+      "@shared/types/source": ["../shared/types/src/index.ts"]
+    }
+  },
+  "references": [
+    { "path": "../shared/types" }
+  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

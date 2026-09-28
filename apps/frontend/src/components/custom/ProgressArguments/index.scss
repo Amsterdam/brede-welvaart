@@ -1,0 +1,20 @@
+.progress-arguments {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+
+	&-item {
+		width: 5px;
+		height: 8px;
+
+		&-blue {
+			background: var(--ams-color-interactive);
+		}
+		&-red {
+			background: var(--ams-color-feedback-error);
+		}
+		&-green {
+			background: var(--ams-color-highlight-green);
+		}
+	}
+}

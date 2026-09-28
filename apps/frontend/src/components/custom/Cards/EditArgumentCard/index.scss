@@ -1,0 +1,297 @@
+// Full-screen "Effect schrijven" editor (native <dialog>, top layer).
+.effect-editor {
+	width: 100vw;
+	max-width: 100vw;
+	height: 100vh;
+	max-height: 100vh;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: var(--ams-color-background);
+	color: var(--ams-color-text);
+
+	&::backdrop {
+		background: rgb(0 0 0 / 40%);
+	}
+
+	display: flex;
+	flex-direction: column;
+
+	&__bar {
+		flex: none;
+		display: flex;
+		align-items: center;
+		padding: var(--ams-space-m) var(--ams-space-l);
+		border-bottom: var(--ams-border-width-s) solid var(--ams-color-separator);
+	}
+
+	&__close {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--ams-space-xs);
+		padding: var(--ams-space-xs) 0;
+		background: transparent;
+		border: 0;
+		color: var(--ams-color-interactive);
+		font: inherit;
+		font-weight: var(--ams-typography-body-text-bold-font-weight);
+		cursor: pointer;
+
+		svg path {
+			fill: currentColor;
+		}
+	}
+
+	&__scroll {
+		flex: 1 1 auto;
+		overflow-y: auto;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: var(--ams-space-xl) var(--ams-space-l);
+		display: flex;
+		flex-direction: column;
+		gap: var(--ams-space-l);
+	}
+
+	&__title {
+		margin: 0;
+	}
+
+	&__band-field {
+		display: flex;
+		flex-direction: column;
+		gap: var(--ams-space-s);
+		max-width: 28rem;
+
+		> span:first-child {
+			color: var(--ams-color-text);
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: var(--ams-typography-body-text-bold-font-weight);
+		}
+	}
+
+	&__cols {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		gap: var(--ams-space-xl);
+		align-items: start;
+	}
+
+	&__col {
+		min-width: 0;
+	}
+
+	&__footer {
+		flex: none;
+		display: flex;
+		justify-content: flex-end;
+		gap: var(--ams-space-m);
+		padding: var(--ams-space-m) var(--ams-space-l);
+		border-top: var(--ams-border-width-s) solid var(--ams-color-separator);
+	}
+
+	@media (max-width: 760px) {
+		&__cols {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+}
+
+// AI "Let op" alert — purple accent + wand icon (sits in the full-width band).
+.card-content-ai-alert {
+	border-color: var(--ams-color-highlight-purple);
+
+	.ams-alert__severity-indicator {
+		background: var(--ams-color-highlight-purple);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-inline: var(--ams-space-xs);
+	}
+
+	.ams-alert__severity-indicator svg {
+		display: none;
+	}
+
+	.ams-alert__severity-indicator::before {
+		content: "";
+		width: 16px;
+		height: 16px;
+		background: var(--ams-color-background);
+		mask: url("../../../../assets/icons/ai-wand-stars.svg") center / contain no-repeat;
+	}
+
+	.ams-alert__content {
+		padding-block: var(--ams-space-s);
+	}
+
+	.ams-heading,
+	.ams-paragraph {
+		margin: 0;
+	}
+}
+
+// Each column is a stack of fields with label-on-top.
+.card-content-edit-argument {
+	display: flex;
+	flex-direction: column;
+	gap: var(--ams-space-l);
+
+	> div {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: var(--ams-space-s);
+
+		> span:first-of-type {
+			color: var(--ams-color-text);
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: var(--ams-typography-body-text-bold-font-weight);
+
+			// Error state styling
+			&.field-label-error {
+				color: var(--ams-error-message-color);
+			}
+		}
+
+		.card-content-sentiment {
+			.chips {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 9px;
+			}
+		}
+
+		.card-content-timelocation {
+			display: grid;
+			grid-template-columns: auto minmax(0, 1fr);
+			align-items: center;
+			gap: 16px;
+
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+
+			&.card-content-timelocation-time {
+				.card-content-timelocation-list {
+					&-item:nth-child(3)::after {
+						content: "";
+						position: absolute;
+						right: -16px;
+						height: 100%;
+						width: 1px;
+						background: var(--gray-10);
+					}
+					&-item:nth-child(4) {
+						margin-left: 23px;
+					}
+				}
+			}
+
+			&.card-content-timelocation-location {
+				.card-content-timelocation-list {
+					&-item:nth-child(4)::after {
+						content: "";
+						position: absolute;
+						right: -16px;
+						height: 100%;
+						width: 1px;
+						background: var(--gray-10);
+					}
+					&-item:nth-child(5) {
+						margin-left: 23px;
+					}
+				}
+			}
+
+			&-list {
+				position: relative;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 9px;
+			}
+		}
+
+		.card-content-sourcetype {
+			.chips {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 8px;
+			}
+		}
+
+		.card-content-add-overview {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.card-content-ai-proposal-label {
+			color: var(--ams-color-highlight-purple) !important;
+			font-weight: var(--ams-typography-body-text-bold-font-weight);
+			display: inline-flex;
+			align-items: center;
+			gap: var(--ams-space-xs);
+
+			svg path {
+				fill: currentColor;
+			}
+		}
+
+		.card-content-ai-proposal {
+			width: 100%;
+			box-sizing: border-box;
+			padding: var(--ams-space-m);
+			border: var(--ams-border-width-s) solid var(--ams-color-separator);
+			border-left: 6px solid var(--ams-color-highlight-purple);
+			background: var(--ams-color-background);
+			color: var(--ams-color-text-secondary);
+			font-family: var(--ams-typography-font-family);
+			font-size: var(--ams-typography-body-text-font-size);
+			line-height: var(--ams-typography-body-text-line-height);
+			resize: none;
+		}
+	}
+}
+
+.card-content-fixed-source {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	background: var(--ams-color-primary-blue-100, #e6f0ff);
+	border: 1px solid var(--ams-color-primary-blue, #004699);
+}
+
+.card-content-fixed-source__title {
+	font-weight: 700;
+	overflow-wrap: anywhere;
+}
+
+.card-content-fixed-source__hint {
+	margin-top: 0.25rem;
+	color: var(--ams-color-neutral-grey4, #4f4f4f);
+}
+
+.card-content-fixed-source__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	color: var(--ams-color-primary-blue, #004699);
+	text-decoration: underline;
+	font-weight: 700;
+	overflow-wrap: anywhere;
+}
+
+.card-content-fixed-source__link:hover {
+	text-decoration: none;
+}

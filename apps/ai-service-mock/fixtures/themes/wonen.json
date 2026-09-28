@@ -1,0 +1,126 @@
+{
+  "sources": [
+    {
+      "doc_id": "openresearch:52001",
+      "title": "Woningmarktdruk in stadsdelen met hoge bezoekersaantallen",
+      "content": "Vergelijking van huurprijsindex en aanbod permanente woningen tussen wijken met en zonder geconcentreerde bezoekerseconomie. Schaarste neemt sterker toe in zones met vakantieverhuur.",
+      "url": "https://openresearch.amsterdam/nl/page/52001",
+      "score": 0.93,
+      "chunk_type": "summary",
+      "published_at": "2024-05-21T00:00:00Z",
+      "category": "wonen"
+    },
+    {
+      "doc_id": "openresearch:52002",
+      "title": "Effect van vergunningsplicht op kortstondige verhuur",
+      "content": "Evaluatie van het Amsterdamse vergunningenstelsel sinds 2020. Conclusie: scherpere handhaving vermindert illegale aanbiedingen maar verschuift activiteit naar omliggende gemeenten.",
+      "url": "https://openresearch.amsterdam/nl/page/52002",
+      "score": 0.88,
+      "chunk_type": "section",
+      "published_at": "2024-01-14T00:00:00Z",
+      "category": "wonen"
+    },
+    {
+      "doc_id": "openresearch:52003",
+      "title": "Woonoverlast in toeristische buurten",
+      "content": "Meldingen van geluidsoverlast, afval en groepsgedrag zijn drie- tot vijfmaal hoger in zones met grote bezoekersdichtheid.",
+      "url": "https://openresearch.amsterdam/nl/page/52003",
+      "score": 0.84,
+      "chunk_type": "body",
+      "published_at": "2023-10-09T00:00:00Z",
+      "category": "wonen"
+    },
+    {
+      "doc_id": "openresearch:52004",
+      "title": "Doelgroepenbeleid en woningtoewijzing",
+      "content": "Analyse van toewijzingscijfers in de sociale huur. Doelgroepen die werkzaam zijn in de bezoekerseconomie hebben relatief slechte toegang tot de stad.",
+      "url": "https://openresearch.amsterdam/nl/page/52004",
+      "score": 0.80,
+      "chunk_type": "summary",
+      "published_at": "2024-03-30T00:00:00Z",
+      "category": "wonen"
+    },
+    {
+      "doc_id": "openresearch:52005",
+      "title": "Verduurzaming particuliere huurwoningen",
+      "content": "Voortgang van energetische upgrades in particuliere voorraad blijft achter, ook in toeristische gebieden waar exploitatie aantrekkelijk is.",
+      "url": "https://openresearch.amsterdam/nl/page/52005",
+      "score": 0.75,
+      "chunk_type": "section",
+      "published_at": "2024-06-02T00:00:00Z",
+      "category": "wonen"
+    },
+    {
+      "doc_id": "openresearch:52006",
+      "title": "Stedelijke verdichting en bezoekersfuncties",
+      "content": "Modelstudie naar de combinatie van wonen, werken en bezoekersfuncties in transformatiegebieden zoals Sloterdijk en Amstelkwartier.",
+      "url": "https://openresearch.amsterdam/nl/page/52006",
+      "score": 0.71,
+      "chunk_type": "body",
+      "published_at": "2023-12-18T00:00:00Z",
+      "category": "wonen"
+    }
+  ],
+  "authors": [
+    {
+      "id": 9201,
+      "name": "Dr. Yara Halil",
+      "affiliation": "TU Delft — Faculteit Bouwkunde",
+      "doc_ids": ["openresearch:52001", "openresearch:52006"],
+      "score": 0.93
+    },
+    {
+      "id": 9202,
+      "name": "Mark Stegeman",
+      "affiliation": "Amsterdams Woningbedrijf",
+      "doc_ids": ["openresearch:52002", "openresearch:52004"],
+      "score": 0.86
+    },
+    {
+      "id": 9203,
+      "name": "Sanne van Loon",
+      "affiliation": "RIGO Research en Advies",
+      "doc_ids": ["openresearch:52003"],
+      "score": 0.81
+    },
+    {
+      "id": 9204,
+      "name": "Daan Pieterse",
+      "affiliation": "AMS Institute",
+      "doc_ids": ["openresearch:52005"],
+      "score": 0.74
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "Aanbodonttrekking door vakantieverhuur",
+      "description": "Korte verhuur reduceert beschikbaar woningaanbod in concentratiegebieden. De effectiviteit van handhaving is gemengd; coördinatie met regiogemeenten ontbreekt.",
+      "themes": ["wonen"],
+      "supporting_doc_ids": ["openresearch:52001", "openresearch:52002"]
+    },
+    {
+      "topic": "Leefbaarheid versus economische exploitatie",
+      "description": "Klassieke spanning tussen woonkwaliteit en commerciële exploitatie van woningen. Bewoners ervaren overlast die zich slecht laat handhaven.",
+      "themes": ["wonen", "subjectief-welzijn"],
+      "supporting_doc_ids": ["openresearch:52003"]
+    },
+    {
+      "topic": "Sociaal-economische rechtvaardigheid in woningtoewijzing",
+      "description": "Werkenden in de bezoekerssector — vaak met lagere inkomens en tijdelijke contracten — hebben relatief slechte toegang tot stedelijke huisvesting.",
+      "themes": ["wonen", "consumptie-en-inkomen"],
+      "supporting_doc_ids": ["openresearch:52004"]
+    },
+    {
+      "topic": "Verduurzaming en exploitatieprikkels",
+      "description": "Hoge huurinkomsten in toeristische zones verminderen de prikkel om particuliere huurvoorraad te verduurzamen.",
+      "themes": ["wonen", "natuurlijk-kapitaal"],
+      "supporting_doc_ids": ["openresearch:52005"]
+    },
+    {
+      "topic": "Gemengde wijken in transformatiegebieden",
+      "description": "In nieuwe wijken kunnen wonen, werken en bezoekersfuncties bewust worden gemengd. Programmering vraagt om langetermijnsturing op ruimtelijk niveau.",
+      "themes": ["wonen", "ruimtelijke-samenhang-en-kwaliteit"],
+      "supporting_doc_ids": ["openresearch:52006"]
+    }
+  ]
+}

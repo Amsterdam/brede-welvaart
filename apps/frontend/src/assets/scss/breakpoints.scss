@@ -1,0 +1,65 @@
+@media all and (max-width: 1620px) {
+	.login-page {
+		.ams-row {
+			grid-template-columns: 44% 56%;
+		}
+	}
+}
+
+@media all and (max-width: 1366px) {
+	.home {
+		grid-template-columns: minmax(0, 1fr) 300px;
+	}
+
+	.wizard-content,
+	.wizard-content-themes,
+	.wizard-content-theme-overview {
+		grid-template-columns: repeat(2, 50%);
+	}
+
+	.comments-wrapper {
+		width: 300px;
+	}
+}
+
+@media all and (max-width: 1024px) {
+	.home {
+		grid-template-columns: 1fr;
+
+		&-right {
+			display: none;
+		}
+	}
+
+	.login-page .ams-row {
+		grid-template-columns: 1fr;
+	}
+
+	.login-page .info-column {
+		display: none;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.home {
+		&-left {
+			padding: 24px;
+
+			&-projects table {
+				font-size: 14px;
+
+				thead {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.login-page .login-column {
+		padding: 16px;
+
+		.login-actions {
+			max-width: 100%;
+		}
+	}
+}

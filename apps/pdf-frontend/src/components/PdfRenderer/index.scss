@@ -1,0 +1,25 @@
+.editor-preview {
+	.react-transform-wrapper {
+		.react-transform-component {
+			.watermark {
+				z-index: 1;
+				border: 8px solid var(--ams-color-text);
+				opacity: 0.2;
+				display: inline-flex;
+				padding: 80px;
+				justify-content: center;
+				align-items: center;
+				gap: 40px;
+				margin-bottom: 1000px;
+
+				span {
+					color: #000;
+					font-family: "Amsterdam Sans";
+					font-size: 320px;
+					font-style: normal;
+					font-weight: 1600;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+.ams-product-tour.tg-dialog {
+	min-height: 0;
+	border: var(--ams-border-width-s) solid var(--ams-color-separator);
+	border-radius: 0;
+	background: var(--ams-color-background);
+	box-shadow: 0 var(--ams-space-xs) var(--ams-space-l) color-mix(in srgb, var(--ams-color-text) 24%, transparent);
+	color: var(--ams-color-text);
+	font-family: var(--ams-typography-font-family);
+	font-size: var(--ams-typography-body-text-font-size);
+	line-height: var(--ams-typography-body-text-line-height);
+
+	.tg-dialog-header {
+		padding: var(--ams-space-l) var(--ams-space-l) 0;
+	}
+
+	.tg-dialog-title {
+		font-size: var(--ams-typography-heading-4-font-size);
+		font-weight: var(--ams-typography-heading-font-weight);
+		line-height: var(--ams-typography-heading-4-line-height);
+	}
+
+	.tg-dialog-close-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: var(--ams-space-xl);
+		height: var(--ams-space-xl);
+		margin-left: var(--ams-space-m);
+		opacity: 1;
+
+		&:focus-visible {
+			outline: var(--ams-border-width-m) solid var(--ams-color-interactive);
+			outline-offset: var(--ams-space-xs);
+		}
+	}
+
+	.tg-dialog-body {
+		padding: var(--ams-space-m) var(--ams-space-l) var(--ams-space-l);
+	}
+
+	.tg-dialog-footer {
+		gap: var(--ams-space-m);
+		padding: 0 var(--ams-space-l) var(--ams-space-l);
+
+		button.tg-dialog-btn {
+			min-height: 44px;
+			padding: var(--ams-space-s) var(--ams-space-m);
+			border: var(--ams-border-width-m) solid var(--ams-color-interactive);
+			border-radius: 0;
+			background: var(--ams-color-background);
+			color: var(--ams-color-interactive);
+			font: inherit;
+			font-weight: var(--ams-typography-body-text-bold-font-weight);
+
+			&:last-child {
+				background: var(--ams-color-interactive);
+				color: var(--ams-color-text-inverse);
+			}
+			&:focus-visible {
+				outline: var(--ams-border-width-m) solid var(--ams-color-interactive);
+				outline-offset: var(--ams-space-xs);
+			}
+		}
+	}
+
+	.tg-step-progress {
+		color: var(--ams-color-text-secondary);
+		font-size: var(--ams-typography-body-text-small-font-size);
+		font-weight: var(--ams-typography-body-text-font-weight);
+		letter-spacing: normal;
+		opacity: 1;
+	}
+
+	.tg-arrow {
+		border-radius: 0;
+		background: var(--ams-color-background);
+	}
+}
+
+.ams-product-tour-backdrop.tg-backdrop {
+	border: var(--ams-border-width-m) solid var(--ams-color-interactive);
+	border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ams-product-tour.tg-dialog,
+	.ams-product-tour-backdrop.tg-backdrop {
+		transition: none !important;
+	}
+}

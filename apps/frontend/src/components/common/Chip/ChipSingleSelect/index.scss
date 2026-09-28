@@ -1,0 +1,49 @@
+.chip-single-select {
+	position: relative;
+	width: fit-content;
+	padding: 6px 18px;
+	box-sizing: border-box;
+	border: 1px solid var(--ams-color-separator);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 9px;
+	cursor: pointer;
+
+	&-red {
+		background: var(--ams-color-feedback-error);
+		border-color: transparent;
+		color: var(--white);
+	}
+	&-blue {
+		background: var(--ams-color-interactive);
+		border-color: transparent;
+		color: var(--white);
+	}
+	&-green {
+		background: var(--ams-color-highlight-green);
+		border-color: transparent;
+		color: var(--white);
+	}
+	&-discussion-green {
+		background: rgba(0, 160, 60, 0.05);
+		border-color: var(--ams-color-highlight-green);
+		color: var(--ams-color-highlight-green);
+	}
+
+	&-error {
+		border-color: var(--ams-color-feedback-error);
+		border-width: 2px;
+		box-sizing: border-box;
+	}
+
+	span {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	svg {
+		width: 16px;
+		height: 16px;
+	}
+}

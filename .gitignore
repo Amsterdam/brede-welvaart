@@ -1,0 +1,46 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Node
+node_modules/
+.turbo/
+dist/
+*.tsbuildinfo
+coverage/
+
+# Local environment files (copy from the .env.example next to them)
+.env
+.env.local
+.env.*.local
+.env.test
+
+# Agent skills hydrated from skills-lock.json by `pnpm install`
+.agents/skills/
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.pytest_cache/
+
+# AI service data: local vector index and ingested documents are not committed
+apps/ai-service/data/*
+!apps/ai-service/data/example_docs/
+apps/ai-service/data/example_docs/*
+!apps/ai-service/data/example_docs/README.md
+apps/ai-service/tests/data/uploads/*
+!apps/ai-service/tests/data/uploads/README.md
+or_data/
+
+# Bulk documents and exports
+*.pdf
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.csv
+*.zip

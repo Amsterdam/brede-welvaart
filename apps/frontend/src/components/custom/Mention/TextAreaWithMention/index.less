@@ -1,0 +1,173 @@
+@mentionsPrefixCls: rc-mentions;
+
+// The textarea, the rc-mentions caret-measure div and the highlight mirror must share
+// these exact text metrics, otherwise pills and the dropdown drift away from the text.
+@mention-font-size: 18px;
+@mention-line-height: 26px;
+@mention-padding-block: 12px;
+@mention-padding-inline: 8px;
+
+// The dropdown portals into the surrounding <dialog> (see getPopupContainer) so it renders in
+// the browser top layer. The dialog's UA default `overflow: auto` would still clip it; scrolling
+// happens in .ams-dialog__body, never on the dialog box itself, so visible overflow is safe here.
+dialog.ams-dialog:has(.mention-textarea) {
+	overflow: visible;
+}
+
+.mention-textarea {
+	position: relative;
+	width: 100%;
+
+	&-highlight {
+		position: absolute;
+		inset: 1px; // stay inside the .rc-mentions border
+		padding: @mention-padding-block @mention-padding-inline;
+		box-sizing: border-box;
+		overflow: hidden;
+		pointer-events: none;
+		font-family: inherit;
+		font-size: @mention-font-size;
+		font-weight: 400;
+		line-height: @mention-line-height;
+		letter-spacing: normal;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		color: transparent;
+
+		&-tag {
+			background-color: var(--mention-tag-color);
+			// Fake pill padding without shifting the text the pill sits behind
+			box-shadow: 0 0 0 3px var(--mention-tag-color);
+			border-radius: 6px;
+			-webkit-box-decoration-break: clone;
+			box-decoration-break: clone;
+		}
+	}
+}
+
+.@{mentionsPrefixCls} {
+	display: block;
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	white-space: pre-wrap;
+	border: 1px solid var(--ams-color-separator, #767676);
+	border-radius: 3px;
+	background: transparent;
+	overflow: visible;
+
+	&:focus-within {
+		outline: 2px solid var(--ams-color-text, #000);
+		outline-offset: 2px;
+	}
+
+	// Error state mirrors the ADS invalid styling used by TextInput, so the
+	// description field reads as invalid alongside its ErrorMessage.
+	&--invalid {
+		border-color: var(--ams-error-message-color);
+		box-shadow: 0 0 0 1px var(--ams-error-message-color);
+	}
+}
+
+// Extra specificity on purpose: the generic dialog rules in main.scss
+// (.ams-dialog .textarea-div textarea) must not win, or the highlight mirror and
+// the caret measurement drift out of sync with the real text.
+div.mention-textarea .@{mentionsPrefixCls} {
+	> textarea,
+	.@{mentionsPrefixCls}-measure {
+		font-family: inherit;
+		font-size: @mention-font-size;
+		font-weight: 400;
+		font-style: normal;
+		line-height: @mention-line-height;
+		letter-spacing: normal;
+		padding: @mention-padding-block @mention-padding-inline;
+		margin: 0;
+		box-sizing: border-box;
+		vertical-align: top;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		overflow-x: hidden;
+		overflow-y: auto;
+		text-align: inherit;
+		tab-size: inherit;
+		direction: inherit;
+	}
+
+	> textarea {
+		display: block;
+		width: 100%;
+		min-height: 106px;
+		border: none;
+		outline: none; // replaced by :focus-within on the wrapper
+		resize: none;
+		background: transparent;
+		color: var(--ams-color-text, #000);
+	}
+
+	.@{mentionsPrefixCls}-measure {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		color: transparent;
+		z-index: -1;
+	}
+}
+
+// ================== Dropdown ==================
+.@{mentionsPrefixCls}-dropdown {
+	position: absolute;
+	z-index: 100;
+	min-width: 280px;
+	background: var(--white, #fff);
+	border: 1px solid var(--gray-10, #e6e6e6);
+	border-radius: 8px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+	overflow: hidden;
+
+	&-menu {
+		list-style: none;
+		margin: 0;
+		padding: 4px;
+		max-height: 264px;
+		overflow-y: auto;
+
+		&-item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 6px 8px;
+			border-radius: 6px;
+			cursor: pointer;
+			font-size: 16px;
+			color: var(--ams-color-text, #000);
+
+			&-active {
+				background: var(--gray-4, #f6f6f6);
+			}
+
+			&-disabled {
+				cursor: default;
+				color: var(--ams-color-text-secondary, #767676);
+
+				&.@{mentionsPrefixCls}-dropdown-menu-item-active {
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+.mention-option-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.mention-option-label {
+	font-weight: 500;
+}

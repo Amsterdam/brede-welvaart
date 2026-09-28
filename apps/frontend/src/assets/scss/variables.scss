@@ -1,0 +1,49 @@
+:root {
+	--sidebar-opened-width: 300px;
+	--sidebar-closed-width: 112px;
+	--white: #fff;
+	--black: #000;
+	--neutral-grey-1: #e8e8e8;
+	--neutral-grey-2: #bebebe;
+	--neutral-grey-4: #323232;
+
+	--ams-color-interactive-5: rgba(0, 70, 153, 0.05);
+	--gray-4: #f6f6f6;
+	--gray-10: #e6e6e6;
+
+	/* Theme colors */
+	--theme-economisch-kapitaal: #a00078;
+	--theme-economisch-kapitaal-bg: rgba(160, 0, 120, 0.1);
+	--theme-consumptie-en-inkomen: #009de6;
+	--theme-consumptie-en-inkomen-bg: rgba(0, 157, 230, 0.1);
+	--theme-gezondheid: #00a03c;
+	--theme-gezondheid-bg: rgba(0, 160, 60, 0.1);
+	--theme-natuurlijk-kapitaal: #bed200;
+	--theme-natuurlijk-kapitaal-bg: rgba(190, 210, 0, 0.1);
+	--theme-onderwijs-en-opleiding: #ff9100;
+	--theme-onderwijs-en-opleiding-bg: rgba(255, 145, 0, 0.1);
+	--theme-ruimtelijke-samenhang-en-kwaliteit: #004699;
+	--theme-ruimtelijke-samenhang-en-kwaliteit-bg: rgba(0, 70, 153, 0.1);
+	--theme-sociaal-kapitaal: #ec0000;
+	--theme-sociaal-kapitaal-bg: rgba(236, 0, 0, 0.1);
+	--theme-subjectief-welzijn: #e50082;
+	--theme-subjectief-welzijn-bg: rgba(229, 0, 130, 0.1);
+	--theme-veiligheid: #000000;
+	--theme-veiligheid-bg: rgba(0, 0, 0, 0.1);
+	--theme-wonen: #3fd8c3;
+	--theme-wonen-bg: rgba(63, 216, 195, 0.1);
+
+	/* Scan v1.1 theme slugs — same palette as their v1.0 predecessors */
+	--theme-welzijn: #e50082;
+	--theme-welzijn-bg: rgba(229, 0, 130, 0.1);
+	--theme-arbeid: #009de6;
+	--theme-arbeid-bg: rgba(0, 157, 230, 0.1);
+	--theme-menselijk-kapitaal: #ff9100;
+	--theme-menselijk-kapitaal-bg: rgba(255, 145, 0, 0.1);
+	--theme-ruimte: #004699;
+	--theme-ruimte-bg: rgba(0, 70, 153, 0.1);
+	--theme-samenleving-en-sociaal-kapitaal: #ec0000;
+	--theme-samenleving-en-sociaal-kapitaal-bg: rgba(236, 0, 0, 0.1);
+	--theme-milieu-en-natuurlijk-kapitaal: #bed200;
+	--theme-milieu-en-natuurlijk-kapitaal-bg: rgba(190, 210, 0, 0.1);
+}

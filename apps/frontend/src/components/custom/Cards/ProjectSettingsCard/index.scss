@@ -1,0 +1,48 @@
+.card-content-project-settings {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	&-item {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 32px;
+		cursor: pointer;
+
+		&:hover {
+			span {
+				color: var(--neutral-grey-4);
+			}
+		}
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			span {
+				color: var(--ams-color-text-secondary);
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 28.8px;
+
+				&:first-of-type {
+					font-weight: 800;
+				}
+			}
+		}
+	}
+}
+
+.card-content-project-settings-set-status {
+	display: flex;
+	gap: 16px;
+
+	.project-status {
+		cursor: pointer;
+
+		path {
+			fill: var(--black);
+		}
+	}
+}

@@ -1,0 +1,109 @@
+{
+  "sources": [
+    {
+      "doc_id": "openresearch:53001",
+      "title": "Nachtleven, alcohol en incidenten in uitgaansgebieden",
+      "content": "Politiedata en GGD-meldingen 2019-2024. Incidenten met alcohol en drugs concentreren zich in een beperkt aantal straten van Centrum-West en De Wallen.",
+      "url": "https://openresearch.amsterdam/nl/page/53001",
+      "score": 0.91,
+      "chunk_type": "summary",
+      "published_at": "2024-04-10T00:00:00Z",
+      "category": "veiligheid"
+    },
+    {
+      "doc_id": "openresearch:53002",
+      "title": "Veiligheidsbeleving onder bewoners van drukbezochte buurten",
+      "content": "Bewonerssurvey N=2.400. Veiligheidsbeleving daalt 's avonds; vooral vrouwen en ouderen vermijden bepaalde routes.",
+      "url": "https://openresearch.amsterdam/nl/page/53002",
+      "score": 0.86,
+      "chunk_type": "section",
+      "published_at": "2023-09-22T00:00:00Z",
+      "category": "veiligheid"
+    },
+    {
+      "doc_id": "openresearch:53003",
+      "title": "Zakkenrollerij en georganiseerde diefstal in toeristische zones",
+      "content": "Trendanalyse politieaangiftes. Aantal aangiftes stabiel, maar pakkans daalt door verschuiving naar mobiele bendes.",
+      "url": "https://openresearch.amsterdam/nl/page/53003",
+      "score": 0.82,
+      "chunk_type": "body",
+      "published_at": "2024-02-05T00:00:00Z",
+      "category": "veiligheid"
+    },
+    {
+      "doc_id": "openresearch:53004",
+      "title": "Cameratoezicht en bewonersacceptatie",
+      "content": "Evaluatie van mobiele cameraposten in drukke uitgaansgebieden. Veiligheidsbeleving stijgt licht maar privacy zorgen blijven aanwezig.",
+      "url": "https://openresearch.amsterdam/nl/page/53004",
+      "score": 0.78,
+      "chunk_type": "summary",
+      "published_at": "2024-06-12T00:00:00Z",
+      "category": "veiligheid"
+    },
+    {
+      "doc_id": "openresearch:53005",
+      "title": "Handhavingscapaciteit en seizoenspieken",
+      "content": "Operationele capaciteit van politie en boa's is onvoldoende afgestemd op zomerpiek; gevolgen zichtbaar in responstijden.",
+      "url": "https://openresearch.amsterdam/nl/page/53005",
+      "score": 0.74,
+      "chunk_type": "section",
+      "published_at": "2023-11-30T00:00:00Z",
+      "category": "veiligheid"
+    }
+  ],
+  "authors": [
+    {
+      "id": 9301,
+      "name": "Dr. Iris de Bruin",
+      "affiliation": "NSCR — Nederlands Studiecentrum Criminaliteit en Rechtshandhaving",
+      "doc_ids": ["openresearch:53001", "openresearch:53003"],
+      "score": 0.91
+    },
+    {
+      "id": 9302,
+      "name": "Mehmet Yilmaz",
+      "affiliation": "Politie Amsterdam — Analyse en Onderzoek",
+      "doc_ids": ["openresearch:53002", "openresearch:53005"],
+      "score": 0.85
+    },
+    {
+      "id": 9303,
+      "name": "Prof. Annelies Hartman",
+      "affiliation": "VU Amsterdam — Bestuurswetenschappen",
+      "doc_ids": ["openresearch:53004"],
+      "score": 0.78
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "Concentratie van incidenten op straatniveau",
+      "description": "Incidenten zijn niet stadsbreed gespreid maar zeer geografisch geconcentreerd. Beleid op straatniveau is effectiever dan generieke maatregelen.",
+      "themes": ["veiligheid", "ruimtelijke-samenhang-en-kwaliteit"],
+      "supporting_doc_ids": ["openresearch:53001"]
+    },
+    {
+      "topic": "Verschillen in veiligheidsbeleving",
+      "description": "Mannen, vrouwen, jongeren en ouderen ervaren risico verschillend. Beleid dat alleen objectieve criminaliteit aanpakt mist de helft van het probleem.",
+      "themes": ["veiligheid", "subjectief-welzijn"],
+      "supporting_doc_ids": ["openresearch:53002"]
+    },
+    {
+      "topic": "Verschuiving van delicten in plaats van afname",
+      "description": "Pakkans daalt door mobiele bendes; aangiftecijfers blijven stabiel maar het patroon verandert. Vraagt om regionale aanpak.",
+      "themes": ["veiligheid"],
+      "supporting_doc_ids": ["openresearch:53003"]
+    },
+    {
+      "topic": "Privacy versus zichtbare aanwezigheid",
+      "description": "Cameratoezicht draagt licht bij aan veiligheidsbeleving maar roept terechte zorgen op over privacy en proportionaliteit.",
+      "themes": ["veiligheid", "sociaal-kapitaal"],
+      "supporting_doc_ids": ["openresearch:53004"]
+    },
+    {
+      "topic": "Capaciteitsplanning rond seizoenspieken",
+      "description": "Handhavingscapaciteit volgt jaarschema's terwijl bezoekersdruk piekt. Flexibele inzet rondom evenementen en zomerseizoen is kansrijk.",
+      "themes": ["veiligheid"],
+      "supporting_doc_ids": ["openresearch:53005"]
+    }
+  ]
+}

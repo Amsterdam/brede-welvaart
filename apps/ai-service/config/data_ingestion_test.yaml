@@ -1,0 +1,80 @@
+# config/data_ingestion_test.yaml
+# Test variant of data_ingestion.yaml — same source-scoped layout as production,
+# but isolated to a different storage root so manual `--config` runs cannot
+# collide with production data.
+#
+# Layout:
+#   local:  data_test/openresearch/{openresearch,extracted,...}/...
+#   azure:  openresearch-test (container) -> openresearch/{openresearch,extracted,...}/...
+
+source_root: openresearch
+
+storage:
+  backend: local
+  base_dir: data_test
+  # NOTE: distinct from production's `data` container so manual `--config data_ingestion_test.yaml`
+  # runs (outside the pytest fixture) cannot collide with production blob storage even
+  # if the backend is flipped to azure. The pytest fixture in test_pipeline.py overrides
+  # this with a unique `test-pipeline-*` container anyway.
+  container: openresearch-test
+
+openresearch:
+  base_path: ${source_root}/openresearch
+  lang: nl
+  concurrency: 3
+  pagelen: 100
+  download_files: true
+  follow_document_edges: true
+  skip_existing: true
+  cat:
+    - article
+    - document
+    - research
+    - text
+
+extraction:
+  primary_backend: docling
+  fallback_backend: pymupdf  # null to disable fallback
+  output_dir: ${source_root}/extracted
+  docling:
+    max_file_mb: 100        # Docling loads full layout model per page — keep low
+    max_pages: 300
+    min_text_fraction: 0.2  # skip PDFs where <20% of pages have real text
+    min_char_density: 0.001 # skip praatplaten — image-heavy with sparse vector labels
+  pymupdf:
+    max_file_mb: 500        # PyMuPDF is much lighter on memory
+    max_pages: 1000
+    min_text_fraction: 0.0  # no density filtering — pymupdf handles image PDFs fine
+    min_char_density: 0.0
+  pdfplumber:
+    max_file_mb: 200
+    max_pages: 1000
+    min_text_fraction: 0.0
+    min_char_density: 0.0
+
+assembly:
+  output_dir: ${source_root}/assembled
+
+indexing:
+  collections_dir: ${source_root}/collections
+  collections: [summaries, best_chunks]  # which collections to compile
+  min_chars: 100      # skip chunks smaller than this (e.g. headings with no body)
+  chunk_size: 1000    # for fixed window splitting when no sections are available
+  chunk_overlap: 200
+
+embedding:
+  # backend: azure                              # local | azure
+  # model: text-embedding-3-small
+  backend: local
+  model: intfloat/multilingual-e5-large
+  collection: summaries                       # which collection to serve at runtime
+  collections_dir: ${source_root}/collections
+  store_path: ${source_root}/embeddings
+
+vector_store:
+  # placeholder for when embed step is implemented
+  provider: local
+
+llm:
+  backend: azure
+  deployment: gpt-4o-mini

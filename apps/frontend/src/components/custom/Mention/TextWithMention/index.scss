@@ -1,0 +1,15 @@
+.mention {
+	margin: 0 4px;
+	display: inline-flex;
+	vertical-align: middle;
+	align-items: center;
+	font-weight: 800;
+	gap: 4px;
+	padding: 4px 12px;
+	box-sizing: border-box;
+	border-radius: 16px;
+
+	span::first-letter {
+		text-transform: uppercase;
+	}
+}

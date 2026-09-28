@@ -1,0 +1,19 @@
+{
+	"extends": "../../tsconfig.frontend.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"isolatedModules": true,
+		"noEmit": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"types": ["vite/client"],
+		"allowJs": true,
+		"paths": {
+			"@shared/ui": ["../shared/ui/src"],
+			"@shared/types": ["../shared/types/src"]
+		}
+	},
+	"references": [{ "path": "../shared/types" }, { "path": "../shared/ui" }],
+	"include": ["src/**/*"]
+}

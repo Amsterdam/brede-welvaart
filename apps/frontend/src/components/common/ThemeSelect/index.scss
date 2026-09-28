@@ -1,0 +1,113 @@
+.theme-select {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: var(--ams-space-xs, 0.5rem);
+}
+
+.theme-select__label {
+	font-weight: 700;
+}
+
+.theme-select__button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	font: inherit;
+	color: inherit;
+	background: var(--ams-color-primary-white, #fff);
+	border: 1px solid var(--ams-color-primary-black, #004699);
+	cursor: pointer;
+}
+
+.theme-select__button:focus-visible {
+	outline: 2px solid var(--ams-color-primary-black, #000);
+	outline-offset: 2px;
+}
+
+.theme-select__value {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	min-width: 0;
+}
+
+.theme-select__name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.theme-select__placeholder {
+	color: var(--ams-color-text-secondary);
+}
+
+.theme-select__value svg,
+.theme-select__option svg {
+	flex: none;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.theme-select__list {
+	position: absolute;
+	top: calc(100% + 0.25rem);
+	left: 0;
+	right: 0;
+	z-index: 30;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	max-height: 18rem;
+	overflow-y: auto;
+	background: var(--ams-color-primary-white, #fff);
+	border: 1px solid var(--ams-color-primary-black, #000);
+	box-shadow: 0 2px 8px rgb(0 0 0 / 18%);
+}
+
+.theme-select__option {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.5rem 0.75rem;
+	cursor: pointer;
+}
+
+.theme-select__tooltip {
+	position: absolute;
+	left: var(--ams-space-s);
+	right: var(--ams-space-s);
+	top: calc(100% - var(--ams-space-xs));
+	z-index: 1;
+	display: none;
+	padding: var(--ams-space-s);
+	font-weight: var(--ams-typography-body-text-font-weight);
+	font-size: var(--ams-typography-body-text-small-font-size);
+	line-height: var(--ams-typography-body-text-small-line-height);
+	color: var(--ams-color-primary-white, #fff);
+	background: var(--ams-color-primary-black, #000);
+}
+
+.theme-select__option:hover .theme-select__tooltip,
+.theme-select__option:focus-visible .theme-select__tooltip {
+	display: block;
+}
+
+.theme-select__option:hover,
+.theme-select__option:focus-visible {
+	background: var(--ams-color-primary-blue-100, #e6f0ff);
+	outline: none;
+}
+
+.theme-select__option--selected {
+	font-weight: 700;
+}
+
+.theme-select__option .theme-select__name {
+	flex: 1;
+	white-space: normal;
+}

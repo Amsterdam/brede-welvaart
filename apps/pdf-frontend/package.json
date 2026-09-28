@@ -1,0 +1,41 @@
+{
+	"name": "ct-brede-welvaart-pdf-frontend",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --force",
+		"build": "vite build --mode production",
+		"build:mode": "vite build --mode $BUILD_MODE",
+		"preview": "vite preview",
+		"lint": "eslint ."
+	},
+	"dependencies": {
+		"@amsterdam/design-system-react": "catalog:",
+		"@apollo/client": "^4.2.12",
+		"@shared/types": "workspace:*",
+		"@shared/ui": "workspace:*",
+		"graphql": "catalog:",
+		"lodash": "catalog:",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8",
+		"react-zoom-pan-pinch": "^4.0.4"
+	},
+	"devDependencies": {
+		"@eslint/js": "catalog:",
+		"@types/react": "^19.2.18",
+		"@types/react-dom": "^19.2.4",
+		"@vitejs/plugin-react": "^6.0.5",
+		"eslint": "catalog:",
+		"eslint-config-prettier": "catalog:",
+		"eslint-plugin-prettier": "catalog:",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^7.1.1",
+		"eslint-plugin-react-refresh": "^0.5.4",
+		"globals": "^17.11.0",
+		"prettier": "catalog:",
+		"typescript": "catalog:",
+		"vite": "^8.2.1",
+		"vite-plugin-svgr": "^5.2.0"
+	}
+}

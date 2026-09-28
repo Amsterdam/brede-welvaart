@@ -1,0 +1,80 @@
+# bw_themes.yaml
+# Effects from existing Brede Welvaart scans.
+# Currently contains the effects on bezoekerseconomie (tourism).
+#
+# When adapting this to your environment, replace these descriptions
+# with the themes and descriptions used at your organisation.
+#
+# Original author: Diederik Roijers, City of Amsterdam
+# Content last updated: 2025
+
+bezoekerseconomie:
+  subjectief_welzijn:
+    nl:
+      - Levendigheid door culturele en recreatieve voorzieningen - Het brede aanbod aan culturele en recreatieve voorzieningen, mede in stand gehouden door de bezoekerseconomie, kan bijdragen aan een gevoel van trots en levendigheid bij bewoners.
+      - Beleving van drukte en toerisme in de binnenstad verschilt per doelgroep - Hoe de drukte en het toerisme in de binnenstad wordt ervaren verschilt tussen doelgroep, levensfase of vestigingsduur. Waar de ene persoon een gebrek aan sociale cohesie mist is deze anonimiteit voor de andere persoon juist aantrekkelijk. De impact van de bezoekerseconomie op subjectief welzijn is daarmee niet eenzijdig te bepalen.
+      - Het is niet mogelijk om het effect van toerisme op vervreemding te isoleren van andere oorzaken - Het niet (meer) of minder herkennen van de stad heeft meerdere oorzaken, waaronder de bezoekerseconomie. Denk bijvoorbeeld aan meer internationals in de stad, individualisering en meer verhuisbewegingen. De specifieke impact van de bezoekerseconomie op subjectief welzijn is hiermee niet goed te bepalen.
+      - Sommige groepen ervaren vervreemding en verlies van controle door constante druk en commercialisering - De constante drukte en commercialisering van de openbare ruimte kan leiden tot een gevoel van vervreemding en het verlies van controle over de eigen leefomgeving.
+      - Stress en onbehagen door overvolle publieke ruimtes - Overvolle publieke ruimtes kunnen leiden tot stress en een gevoel van onbehagen.
+  gezondheid:
+    nl:
+      - Positieve effecten van culturele en recreatieve voorzieningen gericht op toeristen - Het brede aanbod aan culturele en recreatieve voorzieningen, mede in stand gehouden door de bezoekerseconomie, kan bijdragen aan de mentale en fysieke gezondheid.
+      - Stress en slaapverstoring door chronische geluidsoverlast - Chronische geluidsoverlast (rolkoffers, horeca, evenementen) leidt tot stress en slaapverstoring.
+      - Gezondheidsschade door luchtvervuiling en CO2 uitstoot van toeristisch verkeer - Luchtvervuiling door vliegverkeer, touringcars en cruiseschepen (effect elders en hier) heeft negatieve gevolgen voor de luchtwegen en algehele gezondheid van bewoners.
+      - Veel, eentonig en ongezond aanbod van voedsel, alcohol, drugs en nicotine - Het op toerisme georiënteerd aanbod in de straten is ongezond. Door aanbod en zichtbaarheid worden zowel toeristen en Amsterdammers genudged om dit te consumeren. Dit komt o.a. terug uit enquête en rioleringsanalyse.
+      - Overlast en gezondheidsschade door afval - De aanwezigheid van afval en de ervaren overlast hieraan spelen een belangrijke rol in het kader van de gezondheid.
+      - Ongezonde leefomgeving in de buurt van scholen, van voedsel tot speelruimte - Naast het ongezond op toerisme georiënteerd aanbod verdringt deze sector ruimte voor Amsterdammers en scholieren om te bewegen. Denk hierbij aan beperkte speelruimte in de binnenstad.
+  inkomen:
+    nl:
+      - Werkgelegenheid in de bezoekerseconomie - De bezoekerseconomie is een belangrijke bron van inkomen voor veel Amsterdammers die werkzaam zijn in horeca, cultuur, detailhandel en hotellerie.
+      - Draagt bij aan het multiculturele karakter van de stad - De veelheid en diversiteit aan toeristen, in combinatie met een internationaal georiënteerde stad, maakt het aantrekkelijk voor bezoekers om zich hier permanent of met hun bedrijf te vestigen.
+      - Particuliere verhuur kan inkomstenbron voor woningeigenaren zijn maar niet voor huurders - Particuliere verhuur (binnen de regels) biedt een extra inkomstenbron die de financiële buffer van sommige huishoudens kan versterken. Dit is ook een ongelijkmaker aangezien (sociale) huurders niet op deze manier kunnen profiteren van de bezoekerseconomie.
+      - Verschraling van relevant aanbod voor lokale bewoners - Verdringing van reguliere winkels (bakker, slager) door toeristische winkels vermindert de keuzemogelijkheden voor de dagelijkse boodschappen voor bewoners.
+      - Minder toegankelijke binnenstad, horeca en detailhandel door prijsopdrijving - Door o.a. hoge huren en vaak kapitaalkrachtige bezoekers stijgen de prijzen van horeca en detailhandel. De (binnen)stad wordt hiermee minder toegankelijk voor Amsterdammers met een gemiddeld of laag inkomen.
+  onderwijs:
+    nl:
+      - Kansen en leerplekken in de toerismebranche - De aanwezigheid van een grote internationale sector biedt kansen voor stages en leerwerkplekken in bijvoorbeeld de hotel- en evenementenbranche en stimuleert het aanbod van gespecialiseerde opleidingen (bv. Hogere Hotelschool, Toerisme Management).
+      - Maakt meer (internationale) musea met een educatieve functie mogelijk - Musea spelen een belangrijke rol zowel internationaal als nationaal als onderwijzer van het publiek.
+      - Grote diversiteit aan internationale conferenties, evenementen en cultuur brengen veel kennis samen - Amsterdam verwelkomt jaarlijks een grote diversiteit aan conferenties. Denk bijvoorbeeld aan zakelijke of wetenschappelijke conferenties in o.a. de RAI maar ook cultureel belangrijke hoogtepunten als ADE of PRIDE.
+      - Verminderde toegankelijkheid van musea en culturele voorzieningen voor onderwijstaken - Musea en culturele voorzieningen zijn vaak vol door bezoekers uit binnen- en buitenland. Dit maakt hen minder toegankelijk voor een breder publiek, denk bijvoorbeeld aan jonge Amsterdammers of mensen van buiten de stad. Dit is een negatief effect omdat ook kunst en cultuur een belangrijke rol speelt in het onderwijs en ontwikkeling, voor de stad en hele land.
+      - Bezoekerseconomie remt (radicale) innovatie - De bezoekerseconomie heeft een lage drempel om in te stappen en biedt daarmee kansen voor innovatie van concepten, technologieën, etc. Dit is echter beperkt in vergelijking met radicale innovaties in andere sectoren. Gelijktijdig is het een sector waar relatief veel mensen werken die in o.a. kennis of dienstverlenende sectoren productiever kunnen zijn.
+  ruimte:
+    nl:
+      - Hoogwaardig en uitgebreid openbaarvervoersnetwerk mede mogelijk door bezoekers - Bezoekers reizen in vergelijking vaker met het openbaar vervoer dan Amsterdammers. Zij vormen hiermee een extra inkomstenbron voor het (regionaal) openbaar vervoersnetwerk, waar ook bewoners van profiteren.
+      - Meer investeringen en transformaties in openbare ruimte mogelijk - Mede door de (druk van) bezoekerseconomie zijn er in een aantal gebieden in het centrum extra investeringen mogelijk geweest. Denk aan de investeringen en transformaties op de Zeedijk. Dit heeft de ruimtelijke kwaliteit in deze gebieden sterk verbeterd. Extra (gemeentelijke) investeringen in het centrum komen momenteel door ongelijk investeren voor gelijke kansen minder vaak voor.
+      - Overbelasting van infrastructuur zoals straten, OV, afval, etc. - De bezoekersstromen leggen aanvullende druk op (gemeentelijke) infrastructuur en voorzieningen. Hierdoor slijten of zijn deze eerder overbelast.
+      - Verrommeling van het straatbeeld door toeristische detailhandel en reclame - Verrommeling van het straatbeeld door overmaat aan toeristische uithangborden, terrassen en straatverkoop, tast kwalitatieve beleving aan.
+      - Kwaliteit en toegankelijkheid van parken en groen onder druk, o.a. door toeristen. Door toerisme stijgt het gebruik van parken en groenvoorzieningen.
+  economisch_kapitaal:
+    nl:
+      - Vergroot economische waarde, werkgelegenheid, robuustheid en inkomsten voor MKB, stad en gemeente. De bezoekerseconomie genereert economische waarde en werkgelegenheid voor de stad en zorgt voor belastinginkomsten voor de gemeente. Daarnaast is de sector minder gevoelig voor technologische transformaties en daarmee een stabiele werkgever t.t.v. goede conjunctuur.
+      - Versterking van het internationale profiel van Amsterdam - Het versterkt het internationale profiel van Amsterdam, wat de stad aantrekkelijk maakt voor internationale bedrijven, congressen en talent.
+      - Is een bron van innovatie, o.a. door laagdrempeligheid om in deze sector te ondernemen - Werken in de bezoekerseconomie vereist vaak geen formele opleiding. Het is hiermee een sector met vernieuwing en start-ups. Het is daarnaast vaak laagdrempelig en aantrekkelijk werk voor bijvoorbeeld studenten of (tijdelijke) werkloosheid.
+      - Hoge concentratie bedrijven in het centrum.
+      - Economische activiteiten voor toeristen concurreren met andere, kennisintensieve, bedrijvigheid. De economische monocultuur in bepaalde stadsdelen kan innovatie en de vestiging van andere, kennisintensieve bedrijvigheid verdringen.
+      - Kwetsbare, conjunctuurgevoelige, sector met veel onzekere werkgelegenheid - De toeristische sector is kwetsbaar voor economische conjunctuurschommelingen en grote (internationale) ontwikkelingen, denk bijvoorbeeld aan Corona.
+  natuurlijk_kapitaal:
+    nl:
+      - De nabijheid van Schiphol creëert veel vraag en aanbod maar ligt buiten beïnvloedingsmogelijkheid Amsterdam. De reisbewegingen per lucht zorgen voor een grote uitstoot van CO2 en daarmee klimaatverandering. O.a. door de gunstige ligging van Amsterdam bij een grote luchthaven met veel (low cost) vliegaanbieders is het een aantrekkelijke bestemming voor toeristen.
+      - Negatieve klimaateffecten door CO₂-uitstoot van vliegreizen van en naar Amsterdam - Aanzienlijke CO₂-uitstoot door vliegreizen van en naar Amsterdam, wat een negatief effect heeft op het klimaat (afwenteling elders/later). Europese bezoekers hebben hierbij een lagere CO₂ uitstoot dan intercontinentale bezoekers.
+      - Toename van zwerfafval in de openbare ruimte door toeristisch afvalgedrag - Door de groei van de bezoekerseconomie neemt de hoeveelheid afval en zwerfafval in de openbare ruimte toe, wat leidt tot extra druk (op de gemeentelijke schoonmaakdiensten) en een negatieve invloed kan hebben op de leefbaarheid en uitstraling van de omgeving.
+      - Hoog energieverbruik door bouw en bezoek van hotels - Hotels vertegenwoordigen een significant deel van het energieverbruik in Amsterdam. Het energieverbruik is hoog door zowel de vereiste bouwmaterialen tot het gebruik door gasten. Denk bijvoorbeeld aan extra water en warmtegebruik, voedseloverschotten en wasgoed.
+      - Toename van vervuiling en grondstoffengebruik door niet-duurzame consumptie van bezoekers - Het consumptiegedrag van bezoekers, waarbij vaak niet-duurzame producten worden gebruikt of gekocht, heeft een negatief effect op de productieketen en stimuleert milieubelastende productie en distributie.
+  sociaal_kapitaal:
+    nl:
+      - Versterking of verandering sociale cohesie door (nieuwe) buurtinitiatieven - De organisatie van buurtinitiatieven met een hoge opkomst, zoals Wallen Schoon, versterkt de sociale cohesie door de betrokkenheid van studentenverenigingen, ouderen en vrijwilligers bij de binnenstad.
+      - Afname sociale cohesie in buurten door anonieme, wisselende bezoekers - De vertoeristing van buurten leidt tot het verdwijnen van sociale cohesie; buren maken plaats voor anonieme, steeds wisselende bezoekers.
+      - Afname vertrouwen in gemeente als bewoners zich niet gehoord voelen - Het vertrouwen in de lokale overheid kan afnemen als bewoners het gevoel hebben dat de belangen van toeristen en bedrijven prevaleren boven die van henzelf.
+  veiligheid:
+    nl:
+      - Door de grote drukte en diversiteit in de stad kan men anoniem opgaan in de menigte - Sommige Amsterdammers of groepen ervaren juist veiligheid door de anonimiteit in grote groepen.
+      - Ander subjectief veiligheidsgevoel door veel mensen op straat (eyes on the street). De aanwezigheid van veel mensen op straat kan het subjectieve veiligheidsgevoel op bepaalde plekken en tijden verhogen. Dit kan ook negatief uitpakken.
+      - Onveiligheid en overlast door criminaliteit gericht op toeristen - Toeristen zijn zelf een aantrekkelijk doelwit voor straatcriminaliteit (slachtoffer), kunnen juist voor overlast zorgen (dader) en versterken de markt van druggerelateerde criminaliteit (afnemer).
+      - Meer kans op criminaliteit en onveiligheid door grote toeristenstromen - Grote hoeveelheden mensen, toeristen, maken de omgeving eerder chaotisch of onoverzichtelijk, waardoor de gelegenheid tot criminaliteit toeneemt. Hierdoor is crowd control noodzakelijk.
+      - Gevoel van onveiligheid en overlast door bedelaars gericht op toeristen - Drukke toeristische plekken trekken bedelaars aan, wat kan leiden tot onveilige situaties en overlast door bijvoorbeeld het aandringen.
+      - Bezoekers vergroten (gevoel van) veiligheid op locaties buiten de binnenstad. Door (actief) hotelbeleid zijn er meer mensen in voorheen verlaten gebieden zoals station Sloterdijk. Deze gebieden hebben hierdoor een groter (ervaren) gevoel van veiligheid.
+  wonen:
+    nl:
+      - Geen causaal effect (meer) tussen toeristen en onttrekking van woningen door bestaand actief beleid. Door actief beleid om het aantal listings en overnachtingen te beperken is er geen significante onttrekking of prijsopdrijving door vakantieverhuur. Er zijn momenteel < 10.000 listings op ca. 475.000 woningen in de stad. De stijgende woningprijzen komen voornamelijk door schaarste en fiscale redenen.
+      - Indirecte of correlerende relatie tussen bezoekers en woningmarkt - Vakantieverhuur biedt eigenaren wel extra inkomsten die mogelijk mee worden genomen in beslissingen over het huishoudelijk budget, zoals hypotheeklasten. Dit kan bijdragen aan de stijging van woningprijzen. Deze mogelijkheid tot vakantieverhuur kan de ongelijkheid tussen woningeigenaren en huurders vergroten, aangezien huurders hierdoor minder kunnen profiteren van de bezoekerseconomie. Daarnaast kan de verhuur van kamers in woningen het aanbod van woonruimte voor studenten beperken. Dit zijn echter indirecte effecten of correlaties met andere ontwikkelingen.
+      - Daling van rust, veiligheid, leefbaarheid etc. door structurele druk en overlast - Structurele overlast legt druk op de leefbaarheid van bewoners en vermindert hun gevoel van rust, veiligheid en verbondenheid in de eigen woonomgeving.

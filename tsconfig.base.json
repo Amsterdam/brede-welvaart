@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "@shared/types": ["apps/shared/types/src"],
+      "@shared/types/*": ["apps/shared/types/src/*"],
+      "@shared/ui": ["apps/shared/ui"],
+      "@shared/ui/*": ["apps/shared/ui/*"]
+    }
+  }
+}

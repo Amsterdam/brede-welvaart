@@ -1,0 +1,25 @@
+.upload-document-dialog {
+	width: min(659px, calc(100vw - 32px));
+	max-width: 659px;
+}
+
+.upload-document-card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--ams-space-l);
+
+	.ams-field {
+		width: 100%;
+	}
+
+	.ams-file-input,
+	.ams-text-input,
+	.ams-text-area,
+	.ams-select {
+		width: 100%;
+	}
+
+	.ams-text-area {
+		min-height: 132px;
+	}
+}

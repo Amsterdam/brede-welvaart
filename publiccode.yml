@@ -1,0 +1,115 @@
+# This repository adheres to the publiccode.yml standard by including this
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/publiccodeyml/publiccode.yml
+
+publiccodeYmlVersion: "0.4"
+
+name: Brede Welvaart Scan
+url: https://github.com/Amsterdam/brede-welvaart
+softwareType: standalone/web
+platforms:
+  - web
+categories:
+  - collaboration
+  - knowledge-management
+  - workflow-management
+developmentStatus: beta
+releaseDate: "2026-09-28"
+
+usedBy:
+  - Gemeente Amsterdam
+
+description:
+  nl:
+    localisedName: Brede Welvaartscan
+    shortDescription: >-
+      Webapplicatie waarmee de gemeente Amsterdam de uitkomsten van Brede
+      Welvaart-werksessies vastlegt, laat reviewen en archiveert als PDF.
+    longDescription: |
+      De Brede Welvaartscan helpt beleidsmakers om de effecten van een plan
+      of project te beoordelen langs de tien thema's van brede welvaart:
+      subjectief welzijn, gezondheid, consumptie en inkomen, onderwijs en
+      opleiding, ruimtelijke samenhang en kwaliteit, economisch kapitaal,
+      natuurlijk kapitaal, sociaal kapitaal, veiligheid en wonen.
+
+      Een facilitator legt per thema argumenten vast met een sentiment
+      (positief, negatief, neutraal), nodigt reviewers uit die inline
+      reageren, en sluit de scan af met een PDF die naar het
+      raadsinformatiesysteem gearchiveerd wordt.
+
+      Een optionele AI-dienst zoekt bronnen (onderzoek, raadsinformatie,
+      geüploade documenten) en stelt mogelijke effecten voor, die de
+      facilitator beoordeelt en overneemt of verwerpt.
+
+      De applicatie bestaat uit een React-frontend, een GraphQL-backend op
+      Node.js met MongoDB, een aparte render-frontend voor PDF-export en een
+      Python FastAPI-dienst voor de AI-functies. Inloggen gaat via Microsoft
+      Entra ID.
+    features:
+      - Scan aanmaken met tien vaste brede-welvaartthema's
+      - Argumenten per thema met sentiment en locatie
+      - Reviewers uitnodigen en inline laten reageren
+      - Afronden en exporteren als PDF
+      - AI-ondersteunde bronnen- en effectensuggesties
+  en:
+    localisedName: Brede Welvaart Scan
+    shortDescription: >-
+      Web application used by the City of Amsterdam to record, review and
+      archive the outcomes of Brede Welvaart (broad prosperity) workshops.
+    longDescription: |
+      The Brede Welvaart Scan helps policy makers assess the effects of a plan
+      or project along the ten themes of broad prosperity: subjective
+      well-being, health, consumption and income, education, spatial cohesion
+      and quality, economic capital, natural capital, social capital, safety
+      and housing.
+
+      A facilitator records arguments per theme with a sentiment (positive,
+      negative, neutral), invites reviewers who comment inline, and finalises
+      the scan as a PDF that is archived to the council information system.
+
+      An optional AI service discovers sources (research, council documents,
+      uploaded files) and proposes candidate effects that the facilitator
+      accepts or rejects.
+
+      The application consists of a React frontend, a Node.js GraphQL backend
+      on MongoDB, a separate render frontend for PDF export, and a Python
+      FastAPI service for the AI features. Sign-in uses Microsoft Entra ID.
+    features:
+      - Create a scan with ten fixed broad-prosperity themes
+      - Arguments per theme with sentiment and location
+      - Invite reviewers and collect inline comments
+      - Finalise and export as PDF
+      - AI-assisted source discovery and effect suggestions
+
+legal:
+  license: EUPL-1.2
+  mainCopyrightOwner: Gemeente Amsterdam
+  repoOwner: Gemeente Amsterdam
+
+maintenance:
+  type: internal
+  contacts:
+    - name: Innovatie, Gemeente Amsterdam
+      email: innovatie@amsterdam.nl
+      affiliation: Gemeente Amsterdam
+
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - nl
+
+dependsOn:
+  open:
+    - name: MongoDB
+      optional: false
+    - name: Node.js
+      optional: false
+    - name: Python
+      optional: true
+  proprietary:
+    - name: Microsoft Entra ID
+      optional: false
+    - name: Azure AI Foundry
+      optional: true
+    - name: Azure Blob Storage
+      optional: true

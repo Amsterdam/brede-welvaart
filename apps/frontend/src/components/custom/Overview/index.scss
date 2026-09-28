@@ -1,0 +1,122 @@
+.overview-wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+
+	.overview-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h2 {
+			margin: 0;
+		}
+
+		&-legend {
+			padding: 20px 40px;
+			box-sizing: border-box;
+			border: 2px solid var(--black);
+			display: flex;
+			align-items: center;
+			gap: 40px;
+
+			> span {
+				font-size: 36px;
+				font-weight: 700;
+				line-height: 45px;
+			}
+
+			&-item {
+				display: flex;
+				align-items: center;
+				gap: 18px;
+
+				span {
+					font-size: 36px;
+					line-height: 45px;
+				}
+			}
+		}
+	}
+
+	.overview-items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+
+		&-theme {
+			padding: 40px;
+			box-sizing: border-box;
+			border: 4px solid var(--neutral-grey-2);
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			&-header {
+				display: flex;
+				align-items: center;
+				gap: 24px;
+
+				img {
+					height: 44px;
+				}
+
+				h3 {
+					margin: 0;
+				}
+			}
+
+			&-items {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+
+				&-argument {
+					display: flex;
+					align-items: center;
+					gap: 24px;
+
+					&-indicator {
+						min-height: 44px;
+						width: 44px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						&-red {
+							background: var(--ams-color-feedback-error);
+						}
+						&-striped-red {
+							background: repeating-linear-gradient(
+								45deg,
+								var(--ams-color-feedback-error),
+								var(--ams-color-feedback-error) 8px,
+								var(--white) 8px,
+								var(--white) 16px
+							);
+						}
+						&-green {
+							background: var(--ams-color-highlight-green);
+						}
+						&-striped-green {
+							background: repeating-linear-gradient(
+								45deg,
+								var(--ams-color-highlight-green),
+								var(--ams-color-highlight-green) 8px,
+								var(--white) 8px,
+								var(--white) 16px
+							);
+						}
+					}
+
+					span {
+						font-size: 36px;
+						line-height: 44px;
+					}
+				}
+			}
+		}
+	}
+}

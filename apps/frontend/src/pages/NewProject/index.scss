@@ -1,0 +1,162 @@
+.new-project {
+	width: 100%;
+	height: 100%;
+	min-width: 0;
+	background: var(--white);
+	overflow: hidden;
+
+	&-header {
+		display: grid;
+		grid-template-rows: 80px 48px;
+		border-bottom: 1px solid var(--gray-10);
+	}
+
+	&-header-title,
+	&-header-back {
+		display: flex;
+		align-items: center;
+		padding: 0 48px;
+		box-sizing: border-box;
+		border-bottom: 1px solid var(--gray-10);
+	}
+
+	&-header-title {
+		font-size: 16px;
+		font-weight: 800;
+		line-height: 22px;
+	}
+
+	&-header-back {
+		border-bottom: 0;
+	}
+
+	&-back-link,
+	&-previous-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		width: fit-content;
+	}
+
+	&-main {
+		height: calc(100% - 128px);
+		overflow-y: auto;
+		padding: 96px 32px;
+		box-sizing: border-box;
+	}
+
+	&-column {
+		width: min(598px, 100%);
+		margin: 0 auto;
+	}
+
+	&-step {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 36px;
+	}
+
+	&-step-question {
+		gap: 32px;
+	}
+
+	&-intro {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	&-reason-fieldset {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	&-template-fieldset {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	&-radios {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		align-self: flex-start;
+		width: min(320px, 100%);
+		margin-top: 12px;
+	}
+
+	&-checkboxes {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		align-self: flex-start;
+		width: min(320px, 100%);
+		margin-top: 12px;
+
+		.ams-checkbox {
+			width: 100%;
+		}
+
+		.ams-checkbox__input:hover:not(:disabled) + .ams-checkbox__label {
+			color: var(--ams-checkbox-color);
+			text-decoration-line: none;
+		}
+	}
+
+	&-name-field {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		.ams-text-input {
+			width: 100%;
+			box-sizing: border-box;
+		}
+	}
+
+	&-question {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		.ams-text-area {
+			width: 100%;
+			min-height: 90px;
+			box-sizing: border-box;
+		}
+	}
+
+	&-example {
+		font-style: italic;
+	}
+
+	&-error {
+		margin-bottom: 32px;
+	}
+
+	&-step-indicator {
+		margin-bottom: 16px;
+		color: var(--ams-color-text-secondary);
+		font-weight: 600;
+	}
+}
+
+@media (max-width: 760px) {
+	.new-project {
+		&-header-title,
+		&-header-back {
+			padding: 0 24px;
+		}
+
+		&-main {
+			padding: 48px 24px;
+		}
+	}
+}

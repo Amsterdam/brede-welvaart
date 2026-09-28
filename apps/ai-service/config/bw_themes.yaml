@@ -1,0 +1,228 @@
+# bw_themes.yaml
+# Names and descriptions of the Brede Welvaart themes used in the
+# Brede Welvaart Scan at the City of Amsterdam.
+#
+# When adapting this to your environment, replace these descriptions
+# with the themes and descriptions used at your organisation.
+#
+# Original author: Diederik Roijers, City of Amsterdam
+# Content last updated: 2025
+
+subjectief_welzijn:
+  name:
+    nl: subjectief welzijn
+    en: subjective well-being
+  descr:
+    nl: >-
+      Subjectief welzijn gaat om de tevredenheid met het leven en de mate van ervaren
+      regie over het eigen leven. Mensen streven niet alleen naar financiële stabiliteit,
+      maar ook naar een breder gevoel van controle en autonomie. Een samenleving waarin
+      brede welvaart wordt nagestreefd, biedt kansen waarmee individuen en groepen zich
+      kunnen blijven ontwikkelen en zich beter kunnen aanpassen aan veranderingen
+      (een leven lang leren). Het is daarmee niet alleen gericht op materiële welvaart,
+      maar ook op persoonlijke groei en tevredenheid.
+    en: >-
+      Subjective well-being concerns satisfaction with life and the degree of perceived
+      control over one's own life. People do not only strive for financial stability,
+      but also for a broader sense of control and autonomy.
+      A society that aims for broad prosperity offers opportunities for individuals and
+      groups to continue developing themselves and to better adapt to changes
+      (lifelong learning). It is therefore focused not only on material wealth,
+      but also on personal growth and satisfaction.
+
+gezondheid:
+  name:
+    nl: gezondheid
+    en: health
+  descr:
+    nl: >-
+      Gezondheid gaat over fysieke en mentale gezondheid.
+      Het gaat over het hebben van gezonde jaren, ervaren gezondheid en levensverwachting.
+      Gezondheid kan worden beïnvloed door bijvoorbeeld overgewicht, eenzaamheid of stress.
+      Gezondheid gaat ook over actief en volwaardig deel kunnen nemen aan de
+      samenleving met of zonder beperking.
+    en: >-
+      Health refers to both physical and mental well-being.
+      It concerns having healthy years, perceived health, and life expectancy.
+      Health can be influenced by factors such as overweight, loneliness, or stress.
+      Health also involves being able to participate actively and fully in society,
+      with or without a disability.
+
+inkomen:
+  name:
+    nl: consumptie en inkomen
+    en: consumption and income
+  descr:
+    nl: >-
+      Consumptie en inkomen gaat over de financiële situatie op het persoonlijk vlak.
+      Het gaat hierbij zowel om inkomstensbronnen als om consumptiemogelijkheden.
+      Het betreft de individuele keuze en mogelijkheid om diensten en goederen te kiezen,
+      het opbouwen of hebben van een financiële buffer en de ruimte om een eigen
+      levensstijl te onderhouden. Dit inclusief keuzemogelijkheden in onderwijs
+      en gezondheidszorg.
+    en: >-
+      Consumption and income concern the financial situation at the personal level.
+      This includes both sources of income and consumption opportunities.
+      It involves the individual's ability and freedom to choose goods and services,
+      to build or maintain a financial buffer, and to have the means to sustain their
+      own lifestyle. This also includes the ability to make choices in areas such as
+      education and healthcare.
+
+onderwijs:
+  name:
+    nl: onderwijs en opleiding
+    en: education and training
+  descr:
+    nl: >-
+      Onderwijs en opleiding bevat alle onderdelen van overdracht van kennis,
+      leren van vaardigheden en socialisatie op alle leeftijden.
+      Het bevat zowel officiële en onofficiële kennisoverdrachten.
+      Denk aan stages, verenigingen, opleidingen, cursussen of algemene scholing,
+      maar ook informele leermogelijkheden zoals onderdeel zijn van een jeugdteam
+      of het leren van een muziekinstrument.
+      Het gaat ook over de randvoorwaarden voor onderwijs en opleiding,
+      zoals het aantrekken en behouden van onderwijzend personeel, goede schoolgebouwen,
+      digitale infrastructuur, etc.
+    en: >-
+      Education and training encompass all aspects of the transfer of knowledge,
+      the learning of skills, and socialization at all ages.
+      It includes both formal and informal forms of knowledge transfer.
+      Examples include internships, associations, degree programs, courses, or general
+      education, as well as informal learning opportunities such as being part of a
+      youth team or learning to play a musical instrument.
+      It also concerns the conditions necessary for education and training,
+      such as attracting and retaining teaching staff, adequate school buildings,
+      digital infrastructure, and so on.
+
+ruimte:
+  name:
+    nl: ruimtelijke samenhang en kwaliteit
+    en: spatial coherence and quality
+  descr:
+    nl: >-
+      Een kwalitatief goede inrichting van de ruimte is een belangrijke randvoorwaarde
+      voor de ervaren brede welvaart.
+      Ruimtelijke Samenhang en Kwaliteit gaat over de staat en gebruik van de bebouwde
+      en onbebouwde omgeving. De inrichting en samenhang is gericht op nu en de toekomst.
+      Ruimtelijke samenhang draagt bij aan een kwalitatieve beleving van stad, omgeving
+      of aanzicht. Denk bijvoorbeeld aan bereikbaarheid, faciliteiten in de omgevingen
+      en tevredenheid over groene ruimte.
+    en: >-
+      A high-quality spatial environment is an important precondition for experiencing
+      broad well-being. Spatial coherence and quality concern the condition and use of
+      both the built and unbuilt environment.
+      Spatial planning and cohesion are focused on the present as well as the future.
+      Spatial coherence contributes to the qualitative experience of a city, surroundings,
+      or landscape. For example, this includes aspects such as accessibility,
+      local facilities, and satisfaction with green spaces.
+
+economisch_kapitaal:
+  name:
+    nl: economisch kapitaal
+    en: economic capital
+  descr:
+    nl: >-
+      Economisch kapitaal omvat de verschillende vormen van kapitaal op macroniveau,
+      die nodig zijn voor het opbouwen van materiële welvaart en het genereren van
+      economische groei. Het gaat over bedrijfsvestigingen en aantrekkelijkheid voor
+      bedrijven, werkloosheid, werkgelegenheid, vermogens en vermogensongelijkheid
+      binnen de eigen gemeente maar ook in vergelijking met andere gemeentes.
+    en: >-
+      Economic capital includes the various forms of capital at the macro level
+      that are necessary for building material prosperity and generating economic growth.
+      It concerns business establishments and the attractiveness of a municipality for
+      companies, as well as unemployment, employment, wealth, and wealth inequality
+      both within the municipality itself and in comparison with other municipalities.
+
+natuurlijk_kapitaal:
+  name:
+    nl: natuurlijk kapitaal
+    en: natural capital
+  descr:
+    nl: >-
+      Natuurlijk kapitaal gaat om een schone, groene, biodiverse leefomgeving hier en nu,
+      denk aan schoon drinkwater, schone lucht en voldoende kwalitatief groen in de stad.
+      Het gaat enerzijds dat de stad behouden moet worden voor de toekomst, anderzijds
+      dat de leefomstandigheden op de planeet gunstig moeten blijven voor de mensheid
+      en al het andere leven. Denk aan CO₂-vermindering, het beschermen van ecosystemen,
+      het duurzaam gebruik van natuurlijke hulpbronnen nu en in de toekomst.
+    en: >-
+      Natural capital refers to a clean, green, and biodiverse living environment in the
+      here and now — for example, clean drinking water, clean air, and sufficient
+      high-quality green spaces in the city.
+      On the one hand, it concerns preserving the city for the future; on the other hand,
+      it involves ensuring that living conditions on the planet remain favorable for
+      humanity and all other forms of life. This includes CO₂ reduction, the protection
+      of ecosystems, and the sustainable use of natural resources, both now and in the future.
+
+sociaal_kapitaal:
+  name:
+    nl: sociaal kapitaal
+    en: social capital
+  descr:
+    nl: >-
+      Sociaal kapitaal gaat over het verbonden voelen met anderen.
+      Belangrijk zijn sociale netwerken (online en fysiek) die zorgen voor toegang
+      tot informatie en het hebben of maken van een sociaal vangnet.
+      Het gaat om verenigingsgevoel, sociale cohesie,
+      veiligheid om te zijn wie je bent en groepsvorming (bijvoorbeeld met verenigingen
+      of binnen een geloofsovertuigingen).
+      Ook gaat dit thema om vertrouwen in mensen en instituties,
+      maar ook over (financiële) ongelijkheden tussen mensen en groepen.
+    en: >-
+      Social capital concerns the sense of connection with others.
+      Important aspects include social networks (both online and offline)
+      that provide access to information and enable the creation or maintenance of a
+      social safety net. It involves a sense of community, social cohesion,
+      and the safety to be oneself, as well as group formation, for example, through
+      associations or within communities of faith.
+      This theme also relates to trust in people and institutions,
+      as well as to (financial) inequalities between individuals and groups.
+
+veiligheid:
+  name:
+    nl: veiligheid
+    en: safety
+  descr:
+    nl: >-
+      Veiligheid gaat in op de mate waarin overlast, ondermijning en criminaliteit
+      plaatsvinden in de stad en online.
+      Het is een breed spectrum met onder meer hoge-impact-criminaliteit,
+      cybercriminaliteit, druggerelateerde criminaliteit, huiselijk geweld,
+      seksueel geweld en intimidatie, discriminatie en racisme.
+      Het gaat ook over veiligheid verbeteren, overlast terugdringen en slachtoffers helpen.
+      Zowel in de stad (thuis en in de openbare ruimte) als Amsterdammers online.
+      In Amsterdam wordt sociale veiligheid gezien als randvoorwaarde voor een vrije stad.
+      Dat je je veilig voelt, is belangrijk.
+    en: >-
+      Safety concerns the extent to which nuisance, subversion, and crime occur in the
+      city and online. It covers a wide spectrum, including high-impact crime, cybercrime,
+      drug-related crime, domestic violence, sexual violence and harassment,
+      discrimination, and racism.
+      It also involves improving safety, reducing nuisance, and supporting victims
+      both in the city (at home and in public spaces) and for Amsterdam residents online.
+      In Amsterdam, social safety is regarded as a precondition for a free city.
+      Feeling safe is essential.
+
+wonen:
+  name:
+    nl: wonen
+    en: housing
+  descr:
+    nl: >-
+      Een goede betaalbare woonruimte is één van de eerste levensbehoeften.
+      Niet iedereen kan op dit moment aan een woning komen die bij haar/zijn/hun situatie
+      past. Het gaat over de kwaliteit van de woning (inclusief duurzaamheid)
+      en tevredenheid met de woning en woonomgeving.
+      Daarnaast ook de ervaren overlast in/nabij de woning en de woonlasten.
+      Ook de druk op de woningmarkt speelt hier een belangrijke rol
+      (hoe moeilijk komen verschillende doelgroepen aan een woning).
+    en: >-
+      Housing is one of the most basic human needs.
+      At present, not everyone is able to find a home that fits their situation.
+      This theme concerns the quality of housing (including sustainability)
+      and satisfaction with the home and living environment.
+      It also includes the level of nuisance experienced in or near the home,
+      and housing costs. In addition, pressure on the housing market plays an
+      important role, for example, how difficult it is for different groups to find
+      suitable housing.

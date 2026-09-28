@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://www.amsterdam.nl/en/general-items/items-footer/privacy-city-of-amsterdam/information-security/
+    about: Do not open a public issue for security problems. Follow the City of Amsterdam coordinated vulnerability disclosure policy.

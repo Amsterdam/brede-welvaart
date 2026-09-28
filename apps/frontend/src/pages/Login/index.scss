@@ -1,0 +1,83 @@
+.login-page.ams-page {
+	max-inline-size: none;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+
+	.ams-row {
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 55% 45%;
+	}
+
+	.login-column {
+		padding: 24px 32px 48px 32px;
+		background: var(--white);
+
+		.login-logo {
+			max-height: 40px;
+			margin-bottom: 32px;
+			display: flex;
+			align-self: flex-start;
+		}
+
+		.login-actions {
+			max-width: 390px;
+
+			.login-button {
+				width: fit-content;
+			}
+		}
+	}
+
+	.login-footer {
+		width: 390px;
+
+		a {
+			font-weight: 700;
+		}
+	}
+
+	.info-column {
+		margin: 16px;
+		gap: 32px;
+		padding: 0 80px;
+		background: var(--gray-4);
+
+		.scan-image {
+			max-width: 60%;
+			max-height: 214px;
+			height: auto;
+		}
+
+		.text-content {
+			gap: 16px;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-cards {
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+
+			> div {
+				padding: 16px;
+				box-sizing: border-box;
+				background: var(--white);
+			}
+
+			&-card-header {
+				display: flex;
+				align-items: center;
+				gap: 9px;
+
+				h1 {
+					color: var(--ams-color-interactive);
+				}
+			}
+		}
+	}
+}

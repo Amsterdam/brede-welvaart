@@ -1,0 +1,130 @@
+services:
+  backend:
+    build:
+      context: ./
+      target: backend
+    environment:
+      - NODE_ENV=test
+      - MONGODB_URI=mongodb://mongodb:27017/ct-bw
+      - BROWSER_EXECUTABLE_PATH=/usr/bin/chromium
+      - FRONTEND_URL=http://pdf-frontend:5174/
+      - CORS_ORIGIN_WHITELIST=http://localhost:5173,http://pdf-frontend:5174,http://localhost:5174
+      - PORT=3000
+      - AI_SERVICE_URL=http://ai-service:8000
+    depends_on:
+      - mongodb
+      - ai-service
+    ports:
+      - "3000:3000"
+    command: sh -c "pnpm seed && pnpm start"
+
+  frontend:
+    read_only: true
+    build:
+      context: ./
+      target: frontend
+      args:
+        - BUILD_MODE=dev
+        - VITE_BACKEND_URL=http://localhost:3000
+        - VITE_ENTRAID_CLIENT_ID=${VITE_ENTRAID_CLIENT_ID:-}
+        - VITE_ENTRAID_AUTHORITY=${VITE_ENTRAID_AUTHORITY:-}
+        - VITE_ENTRAID_LOGIN_REDIRECT_URI=http://localhost:5173
+        - VITE_ENTRAID_LOGOUT_REDIRECT_URI=http://localhost:5173
+    ports:
+      - "5173:5173"
+    environment:
+      - PORT=5173
+    # Required for NGINX to function in a read-only container
+    volumes:
+      - nginx-cache-tmpfs:/var/cache/nginx
+      - nginx-run-tmpfs:/var/run
+
+  pdf-frontend:
+    read_only: true
+    build:
+      context: ./
+      target: pdf-frontend
+      args:
+        - BUILD_MODE=dev
+        - VITE_BACKEND_URL=http://localhost:3000
+    ports:
+      - "5174:5174"
+    environment:
+      - PORT=5174
+    # Required for NGINX to function in a read-only container
+    volumes:
+      - nginx-cache-tmpfs:/var/cache/nginx
+      - nginx-run-tmpfs:/var/run
+
+  ai-service:
+    build:
+      context: ./
+      target: ai-service
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./apps/ai-service/.env
+
+  mongodb:
+    image: mongo:7.0
+    container_name: ct-bw-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite:3.35.0
+    container_name: ct-bw-azurite
+    restart: unless-stopped
+    command: >
+      azurite
+      --blobHost 0.0.0.0
+      --queueHost 0.0.0.0
+      --tableHost 0.0.0.0
+      --location /data
+      --debug /data/debug.log
+    ports:
+      - "11000:10000"
+      - "11001:10001"
+      - "11002:10002"
+    volumes:
+      - azurite_data:/data
+
+  ai-service-mock:
+    build:
+      context: ./
+      dockerfile: ./apps/ai-service-mock/Dockerfile
+    container_name: ct-bw-ai-service-mock
+    restart: unless-stopped
+    ports:
+      - "8001:8000"
+    environment:
+      - PORT=8000
+      - MOCK_DELAY_MS=1500
+    # Bind-mount fixtures so edits are picked up without a rebuild
+    volumes:
+      - ./apps/ai-service-mock/fixtures:/app/fixtures:ro
+    networks:
+      - default
+      - bw
+
+volumes:
+  mongodb_data:
+  azurite_data:
+  nginx-cache-tmpfs:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=1001,gid=1001"
+  nginx-run-tmpfs:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=1001,gid=1001"
+
+networks:
+  bw:

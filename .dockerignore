@@ -1,0 +1,30 @@
+node_modules
+**/node_modules
+.pnpm
+**/.pnpm
+.venv
+**/.venv
+.pytest_cache
+**/.pytest_cache
+__pycache__
+**/__pycache__
+.git
+.gitignore
+*.md
+dist
+**/dist
+coverage
+**/coverage
+
+# Local backend configuration must never be included in runtime images.
+apps/backend/.env
+apps/backend/.env.local
+
+packages/*/node_modules
+packages/shared/*/node_modules
+
+# Local env files must never be baked into images (frontend .env.test stays: vite reads it at build time)
+.env
+**/.env
+.env.local
+**/.env.local

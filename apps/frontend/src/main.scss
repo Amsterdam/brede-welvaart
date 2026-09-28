@@ -1,0 +1,223 @@
+@use "./assets/scss/themes.scss";
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+	scroll-behavior: smooth;
+	overflow: hidden;
+}
+
+.overflow {
+	&-scroll {
+		overflow: scroll;
+	}
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+
+	p:not(.ams-error-message p):not(.form-error-message p) {
+		color: var(--black);
+	}
+
+	// Error message styling
+	.ams-error-message,
+	[class*="error-message"] {
+		color: var(--ams-error-message-color);
+		font-weight: 500;
+		font-size: 14px;
+		margin-bottom: 8px;
+
+		p {
+			color: var(--ams-error-message-color);
+			font-weight: 500;
+		}
+	}
+
+	// General error message container
+	.form-error-message {
+		color: var(--ams-error-message-color);
+		font-weight: 500;
+		font-size: 14px;
+		margin-bottom: 8px;
+		display: block;
+
+		p {
+			color: var(--ams-error-message-color);
+			font-weight: 500;
+		}
+	}
+
+	// Field label error styling
+	.field-label-error {
+		color: var(--ams-error-message-color);
+		font-weight: bold;
+	}
+
+	&-transparent {
+		background-color: transparent;
+	}
+}
+
+// Scoped input/textarea overrides for overlay and dialog forms
+.overlay,
+.ams-dialog,
+.effect-editor {
+	.textarea-div {
+		display: flex;
+		flex-direction: column;
+
+		textarea {
+			width: 100%;
+			min-height: 106px;
+			padding: 12px 8px;
+			box-sizing: border-box;
+			border: 1px solid var(--ams-color-separator);
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 20px;
+			resize: none;
+		}
+		.textarea-chars {
+			margin-top: 8px;
+			align-self: flex-end;
+			color: var(--ams-color-text-secondary);
+			font-size: 14.4px;
+			line-height: 21.6px;
+		}
+	}
+
+	input {
+		width: 100%;
+		padding: 12px 8px;
+		box-sizing: border-box;
+		border: 1px solid var(--ams-color-separator);
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 20px;
+		box-shadow: none;
+		outline-color: var(--ams-color-text);
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
+
+// Error message styling for dialogs
+.ams-dialog,
+.effect-editor {
+	.ams-error-message,
+	[class*="error-message"] {
+		color: var(--ams-error-message-color);
+		font-weight: 500;
+		font-size: 14px;
+		margin-bottom: 8px;
+
+		p {
+			color: var(--ams-error-message-color);
+			font-weight: 500;
+		}
+	}
+
+	.form-error-message {
+		color: var(--ams-error-message-color);
+		font-weight: 500;
+		font-size: 14px;
+		margin-bottom: 8px;
+		display: block;
+
+		p {
+			color: var(--ams-error-message-color);
+			font-weight: 500;
+		}
+	}
+
+	.field-label-error {
+		color: var(--ams-error-message-color);
+		font-weight: bold;
+	}
+}
+
+// ADS only pads the dialog footer — it doesn't lay the buttons out, so a bare
+// fragment of buttons sits flush with no gap. Space them and let them wrap.
+.ams-dialog__footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--ams-space-m);
+}
+
+// Dialog size overrides
+.card-dialog-large {
+	max-width: 918px;
+	width: 70%;
+}
+
+.prevent-select {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.project-status {
+	width: fit-content;
+	display: flex;
+	gap: 4px;
+	padding: 6px 12px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	border: 1px solid var(--gray-10);
+
+	span {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 20px;
+	}
+
+	&-DRAFT {
+		background: rgba(255, 145, 0, 0.05);
+		border-color: transparent;
+		span {
+			color: var(--ams-color-feedback-warning);
+		}
+		path {
+			fill: var(--ams-color-highlight-orange);
+		}
+	}
+
+	&-PUBLISHED {
+		background: rgba(0, 160, 60, 0.05);
+		border-color: transparent;
+		span {
+			color: var(--ams-color-feedback-success);
+		}
+		path {
+			fill: var(--ams-color-highlight-green);
+		}
+	}
+}
+
+a {
+	color: var(--ams-color-interactive);
+	text-underline-offset: 4px;
+}
+
+.ams-switch {
+	display: flex;
+}

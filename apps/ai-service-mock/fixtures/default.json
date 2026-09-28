@@ -1,0 +1,1216 @@
+{
+  "project_id": "mock-default",
+  "sources": [
+    {
+      "doc_id": "openresearch:51001",
+      "title": "Bezoekerseconomie en de leefbaarheid van de Amsterdamse binnenstad",
+      "content": "Onderzoek naar de spanning tussen toeristische bezoekersstromen en de leefkwaliteit van bewoners in de binnenstad. Conclusie: het gebrek aan ruimtelijke spreiding versterkt overlast in een beperkt aantal straten, terwijl economische baten regiobreed worden gespreid.",
+      "url": "https://openresearch.amsterdam/nl/page/51001",
+      "score": 0.92,
+      "chunk_type": "summary",
+      "published_at": "2024-03-12T00:00:00Z",
+      "category": "ruimte"
+    },
+    {
+      "doc_id": "openresearch:51002",
+      "title": "Spreiding van toerisme: lessen uit Europese steden",
+      "content": "Vergelijkende studie tussen Amsterdam, Barcelona en Wenen rond spreidingsbeleid. Belangrijkste bevinding: alleen een combinatie van prijsprikkels, ruimtelijke spreiding en bewonersparticipatie levert structureel resultaat.",
+      "url": "https://openresearch.amsterdam/nl/page/51002",
+      "score": 0.88,
+      "chunk_type": "section",
+      "published_at": "2023-11-04T00:00:00Z",
+      "category": "economisch_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:51003",
+      "title": "Werkgelegenheid in de bezoekerseconomie",
+      "content": "Analyse van 12.000 banen in horeca, hotels en attracties. Sector biedt veel laagdrempelige instapbanen maar kent lage doorgroei en hoge tijdelijkheid.",
+      "url": "https://openresearch.amsterdam/nl/page/51003",
+      "score": 0.85,
+      "chunk_type": "body",
+      "published_at": "2024-01-22T00:00:00Z",
+      "category": "inkomen"
+    },
+    {
+      "doc_id": "openresearch:51004",
+      "title": "Toeristenbelasting als sturingsinstrument",
+      "content": "Evaluatie van de Amsterdamse toeristenbelasting (2020-2024). De heffing genereert circa €200 miljoen per jaar maar stuurt nauwelijks op gedrag van bezoekers.",
+      "url": "https://openresearch.amsterdam/nl/page/51004",
+      "score": 0.83,
+      "chunk_type": "summary",
+      "published_at": "2024-06-15T00:00:00Z",
+      "category": "economisch_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:51005",
+      "title": "Bewonerservaring in toeristisch drukke buurten",
+      "content": "Mixed-method onderzoek in Wallen, Jordaan en De Pijp. Vertrouwen in de gemeente daalt bij bewoners die overlast ervaren maar geen invloed voelen op besluitvorming.",
+      "url": "https://openresearch.amsterdam/nl/page/51005",
+      "score": 0.81,
+      "chunk_type": "section",
+      "published_at": "2023-09-08T00:00:00Z",
+      "category": "subjectief_welzijn"
+    },
+    {
+      "doc_id": "openresearch:51006",
+      "title": "Cultureel aanbod en stedelijke identiteit",
+      "content": "De aanwezigheid van bezoekers houdt cultureel aanbod (musea, podia, festivals) economisch levensvatbaar. Tegelijk verschuift programmering naar een internationaal publiek.",
+      "url": "https://openresearch.amsterdam/nl/page/51006",
+      "score": 0.78,
+      "chunk_type": "body",
+      "published_at": "2024-02-19T00:00:00Z",
+      "category": "sociaal_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:51007",
+      "title": "Drukte in het openbaar vervoer door bezoekers",
+      "content": "GVB-data toont 28% van metroreizen in de zomer als bezoekersgebonden. Knelpunten ontstaan vooral rond Centraal en Leidseplein.",
+      "url": "https://openresearch.amsterdam/nl/page/51007",
+      "score": 0.74,
+      "chunk_type": "summary",
+      "published_at": "2023-08-30T00:00:00Z",
+      "category": "ruimte"
+    },
+    {
+      "doc_id": "openresearch:51008",
+      "title": "Duurzaamheid van hotelaccommodaties",
+      "content": "Inventarisatie van energie- en waterverbruik in Amsterdamse hotels. Grote variatie tussen ketens en kleine spelers; verduurzaming verloopt traag.",
+      "url": "https://openresearch.amsterdam/nl/page/51008",
+      "score": 0.71,
+      "chunk_type": "section",
+      "published_at": "2024-04-02T00:00:00Z",
+      "category": "natuurlijk_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:51009",
+      "title": "Kortstondige vakantieverhuur en woningvoorraad",
+      "content": "Effect van platforms op woningaanbod en huurprijzen in buurten met hoge bezoekersdichtheid.",
+      "url": "https://openresearch.amsterdam/nl/page/51009",
+      "score": 0.69,
+      "chunk_type": "summary",
+      "published_at": "2024-05-10T00:00:00Z",
+      "category": "wonen"
+    },
+    {
+      "doc_id": "openresearch:51010",
+      "title": "Veiligheidsbeleving in toeristische zones",
+      "content": "Combinatie van politie- en bewonerssurveydata. Veiligheidsbeleving daalt 's avonds in concentratiegebieden.",
+      "url": "https://openresearch.amsterdam/nl/page/51010",
+      "score": 0.66,
+      "chunk_type": "body",
+      "published_at": "2023-12-01T00:00:00Z",
+      "category": "veiligheid"
+    },
+    {
+      "doc_id": "openresearch:51011",
+      "title": "Bezoekersprofielen 2024",
+      "content": "Segmentatiestudie naar bezoekers van Amsterdam: dagjesmensen, citytrippers, zakelijke bezoekers en cultuurtoeristen.",
+      "url": "https://openresearch.amsterdam/nl/page/51011",
+      "score": 0.63,
+      "chunk_type": "summary",
+      "published_at": "2024-07-08T00:00:00Z",
+      "category": "economisch_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:51012",
+      "title": "Mentale gezondheid van horecawerkers",
+      "content": "Werkdruk in de zomerpiek leidt aantoonbaar tot hogere uitval onder horecapersoneel.",
+      "url": "https://openresearch.amsterdam/nl/page/51012",
+      "score": 0.6,
+      "chunk_type": "body",
+      "published_at": "2024-02-29T00:00:00Z",
+      "category": "gezondheid"
+    }
+  ],
+  "authors": [
+    {
+      "id": 9100,
+      "name": "Dr. Esra van Dijk",
+      "affiliation": "Hogeschool van Amsterdam — Urban Vitality",
+      "doc_ids": [
+        "openresearch:51003",
+        "openresearch:51009"
+      ],
+      "score": 0.96,
+      "metadata": {
+        "expertise": [
+          "Stedelijke ontwikkeling",
+          "Digitale stad",
+          "Brede welvaart"
+        ]
+      }
+    },
+    {
+      "id": 9101,
+      "name": "Prof. Karim el-Hassan",
+      "affiliation": "RIVM",
+      "doc_ids": [
+        "openresearch:51010",
+        "openresearch:51009",
+        "openresearch:51003"
+      ],
+      "score": 0.95,
+      "metadata": {
+        "expertise": [
+          "Bezoekerseconomie",
+          "Veerkracht",
+          "Diversiteit",
+          "Cultuurbeleid"
+        ]
+      }
+    },
+    {
+      "id": 9102,
+      "name": "Femke Bos",
+      "affiliation": "SEO Economisch Onderzoek",
+      "doc_ids": [
+        "openresearch:51009"
+      ],
+      "score": 0.94,
+      "metadata": {
+        "expertise": [
+          "Klimaatadaptatie",
+          "Buurtbeleving"
+        ]
+      }
+    },
+    {
+      "id": 9103,
+      "name": "Joost Veenstra",
+      "affiliation": "Movisie",
+      "doc_ids": [
+        "openresearch:51007"
+      ],
+      "score": 0.93,
+      "metadata": {
+        "expertise": [
+          "Wonen",
+          "Werkgelegenheid"
+        ]
+      }
+    },
+    {
+      "id": 9104,
+      "name": "Lina Okafor",
+      "affiliation": "Politie Amsterdam — Analyse & Onderzoek",
+      "doc_ids": [
+        "openresearch:51005",
+        "openresearch:51009",
+        "openresearch:51002"
+      ],
+      "score": 0.93,
+      "metadata": {
+        "expertise": [
+          "Wonen",
+          "Klimaatadaptatie",
+          "Duurzaamheid",
+          "Diversiteit"
+        ]
+      }
+    },
+    {
+      "id": 9105,
+      "name": "Dr. Yara Halil",
+      "affiliation": "AMS Institute",
+      "doc_ids": [
+        "openresearch:51010"
+      ],
+      "score": 0.92,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Mobiliteit"
+        ]
+      }
+    },
+    {
+      "id": 9106,
+      "name": "Mark Stegeman",
+      "affiliation": "AMS Institute",
+      "doc_ids": [
+        "openresearch:51007"
+      ],
+      "score": 0.91,
+      "metadata": {
+        "expertise": [
+          "Sociale cohesie",
+          "Eenzaamheid"
+        ]
+      }
+    },
+    {
+      "id": 9107,
+      "name": "Sanne van Loon",
+      "affiliation": "Gemeente Amsterdam — OIS",
+      "doc_ids": [
+        "openresearch:51003",
+        "openresearch:51005"
+      ],
+      "score": 0.9,
+      "metadata": {
+        "expertise": [
+          "Veiligheidsbeleid",
+          "Brede welvaart",
+          "Participatie"
+        ]
+      }
+    },
+    {
+      "id": 9108,
+      "name": "Daan Pieterse",
+      "affiliation": "Trimbos-instituut",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51002"
+      ],
+      "score": 0.89,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Eenzaamheid",
+          "Bezoekerseconomie"
+        ]
+      }
+    },
+    {
+      "id": 9109,
+      "name": "Dr. Iris de Bruin",
+      "affiliation": "VU Amsterdam — Sociale Wetenschappen",
+      "doc_ids": [
+        "openresearch:51007",
+        "openresearch:51009"
+      ],
+      "score": 0.88,
+      "metadata": {
+        "expertise": [
+          "Klimaatadaptatie",
+          "Participatie",
+          "Welzijn jongeren"
+        ]
+      }
+    },
+    {
+      "id": 9110,
+      "name": "Mehmet Yilmaz",
+      "affiliation": "Planbureau voor de Leefomgeving (PBL)",
+      "doc_ids": [
+        "openresearch:51005",
+        "openresearch:51001",
+        "openresearch:51002"
+      ],
+      "score": 0.88,
+      "metadata": {
+        "expertise": [
+          "Stedelijke ontwikkeling",
+          "Diversiteit",
+          "Inclusie",
+          "Klimaatadaptatie"
+        ]
+      }
+    },
+    {
+      "id": 9111,
+      "name": "Prof. Annelies Hartman",
+      "affiliation": "AMS Institute",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51007",
+        "openresearch:51010"
+      ],
+      "score": 0.87,
+      "metadata": {
+        "expertise": [
+          "Sociale cohesie",
+          "Mobiliteit",
+          "Brede welvaart",
+          "Stadssociologie"
+        ]
+      }
+    },
+    {
+      "id": 9112,
+      "name": "Dr. Hugo van Beek",
+      "affiliation": "TU Delft — Faculteit Bouwkunde",
+      "doc_ids": [
+        "openresearch:51003",
+        "openresearch:51007",
+        "openresearch:51001"
+      ],
+      "score": 0.86,
+      "metadata": {
+        "expertise": [
+          "Veerkracht",
+          "Eenzaamheid",
+          "Veiligheidsbeleid",
+          "Vertrouwen in overheid"
+        ]
+      }
+    },
+    {
+      "id": 9113,
+      "name": "Naomi Adeyemi",
+      "affiliation": "Atlas Research",
+      "doc_ids": [
+        "openresearch:51009"
+      ],
+      "score": 0.85,
+      "metadata": {
+        "expertise": [
+          "Participatie",
+          "Sociaal kapitaal"
+        ]
+      }
+    },
+    {
+      "id": 9114,
+      "name": "Pieter Veenstra",
+      "affiliation": "Movisie",
+      "doc_ids": [
+        "openresearch:51001"
+      ],
+      "score": 0.84,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Werkgelegenheid"
+        ]
+      }
+    },
+    {
+      "id": 9115,
+      "name": "Maria Diaz",
+      "affiliation": "Atlas Research",
+      "doc_ids": [
+        "openresearch:51010",
+        "openresearch:51005",
+        "openresearch:51002"
+      ],
+      "score": 0.83,
+      "metadata": {
+        "expertise": [
+          "Onderwijs",
+          "Werkgelegenheid",
+          "Veerkracht",
+          "Klimaatadaptatie"
+        ]
+      }
+    },
+    {
+      "id": 9116,
+      "name": "Bram Jansen",
+      "affiliation": "Universiteit van Amsterdam — Urban Studies",
+      "doc_ids": [
+        "openresearch:51010",
+        "openresearch:51012"
+      ],
+      "score": 0.82,
+      "metadata": {
+        "expertise": [
+          "Onderwijs",
+          "Gezondheid",
+          "Bezoekerseconomie"
+        ]
+      }
+    },
+    {
+      "id": 9117,
+      "name": "Sophie Klaver",
+      "affiliation": "Universiteit van Amsterdam — Urban Studies",
+      "doc_ids": [
+        "openresearch:51010",
+        "openresearch:51007"
+      ],
+      "score": 0.82,
+      "metadata": {
+        "expertise": [
+          "Mobiliteit",
+          "Inkomensongelijkheid",
+          "Levenstevredenheid"
+        ]
+      }
+    },
+    {
+      "id": 9118,
+      "name": "Tariq Shariff",
+      "affiliation": "CBS",
+      "doc_ids": [
+        "openresearch:51010",
+        "openresearch:51005"
+      ],
+      "score": 0.81,
+      "metadata": {
+        "expertise": [
+          "Stedelijke ontwikkeling",
+          "Vrijetijdsbesteding",
+          "Wonen"
+        ]
+      }
+    },
+    {
+      "id": 9119,
+      "name": "Dr. Marit Visser",
+      "affiliation": "TU Delft — Faculteit Bouwkunde",
+      "doc_ids": [
+        "openresearch:51010",
+        "openresearch:51003",
+        "openresearch:51002"
+      ],
+      "score": 0.8,
+      "metadata": {
+        "expertise": [
+          "Ouderenzorg",
+          "Bezoekerseconomie",
+          "Veerkracht",
+          "Stadssociologie"
+        ]
+      }
+    },
+    {
+      "id": 9120,
+      "name": "Prof. Stefan Wijnen",
+      "affiliation": "GGD Amsterdam",
+      "doc_ids": [
+        "openresearch:51003",
+        "openresearch:51002"
+      ],
+      "score": 0.79,
+      "metadata": {
+        "expertise": [
+          "Sociale cohesie",
+          "Mobiliteit",
+          "Eenzaamheid"
+        ]
+      }
+    },
+    {
+      "id": 9121,
+      "name": "Aisha Khan",
+      "affiliation": "VU Amsterdam — Sociale Wetenschappen",
+      "doc_ids": [
+        "openresearch:51010",
+        "openresearch:51009",
+        "openresearch:51005"
+      ],
+      "score": 0.78,
+      "metadata": {
+        "expertise": [
+          "Inclusie",
+          "Veiligheidsbeleid",
+          "Participatie",
+          "Duurzaamheid"
+        ]
+      }
+    },
+    {
+      "id": 9122,
+      "name": "Jeroen ter Horst",
+      "affiliation": "Politie Amsterdam — Analyse & Onderzoek",
+      "doc_ids": [
+        "openresearch:51005"
+      ],
+      "score": 0.77,
+      "metadata": {
+        "expertise": [
+          "Eenzaamheid",
+          "Klimaatadaptatie"
+        ]
+      }
+    },
+    {
+      "id": 9123,
+      "name": "Anouk de Wit",
+      "affiliation": "AMS Institute",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51010",
+        "openresearch:51007"
+      ],
+      "score": 0.76,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Veerkracht",
+          "Duurzaamheid",
+          "Inclusie"
+        ]
+      }
+    },
+    {
+      "id": 9124,
+      "name": "Dr. Lucas Vermeer",
+      "affiliation": "Atlas Research",
+      "doc_ids": [
+        "openresearch:51002"
+      ],
+      "score": 0.76,
+      "metadata": {
+        "expertise": [
+          "Welzijn jongeren",
+          "Mobiliteit"
+        ]
+      }
+    },
+    {
+      "id": 9125,
+      "name": "Karin Mulder",
+      "affiliation": "Atlas Research",
+      "doc_ids": [
+        "openresearch:51009",
+        "openresearch:51007",
+        "openresearch:51002"
+      ],
+      "score": 0.75,
+      "metadata": {
+        "expertise": [
+          "Veerkracht",
+          "Diversiteit",
+          "Levenstevredenheid",
+          "Sociale cohesie"
+        ]
+      }
+    },
+    {
+      "id": 9126,
+      "name": "Bas van Riet",
+      "affiliation": "Kennisinstituut voor Mobiliteitsbeleid (KiM)",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51003",
+        "openresearch:51010"
+      ],
+      "score": 0.74,
+      "metadata": {
+        "expertise": [
+          "Inkomensongelijkheid",
+          "Mobiliteit",
+          "Levenstevredenheid",
+          "Ruimtelijke ordening"
+        ]
+      }
+    },
+    {
+      "id": 9127,
+      "name": "Eline Postma",
+      "affiliation": "RIVM",
+      "doc_ids": [
+        "openresearch:51001"
+      ],
+      "score": 0.73,
+      "metadata": {
+        "expertise": [
+          "Ouderenzorg",
+          "Onderwijs"
+        ]
+      }
+    },
+    {
+      "id": 9128,
+      "name": "Prof. Henk de Vries",
+      "affiliation": "RIGO Research en Advies",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51007"
+      ],
+      "score": 0.72,
+      "metadata": {
+        "expertise": [
+          "Sociale cohesie",
+          "Participatie",
+          "Levenstevredenheid"
+        ]
+      }
+    },
+    {
+      "id": 9129,
+      "name": "Nadia Bekri",
+      "affiliation": "Politie Amsterdam — Analyse & Onderzoek",
+      "doc_ids": [
+        "openresearch:51002"
+      ],
+      "score": 0.71,
+      "metadata": {
+        "expertise": [
+          "Diversiteit",
+          "Levenstevredenheid"
+        ]
+      }
+    },
+    {
+      "id": 9130,
+      "name": "Tim Bouwman",
+      "affiliation": "RIGO Research en Advies",
+      "doc_ids": [
+        "openresearch:51003"
+      ],
+      "score": 0.7,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Duurzaamheid"
+        ]
+      }
+    },
+    {
+      "id": 9131,
+      "name": "Sabine Roelofs",
+      "affiliation": "Planbureau voor de Leefomgeving (PBL)",
+      "doc_ids": [
+        "openresearch:51002",
+        "openresearch:51005",
+        "openresearch:51001"
+      ],
+      "score": 0.7,
+      "metadata": {
+        "expertise": [
+          "Wonen",
+          "Gezondheid",
+          "Sociale cohesie",
+          "Subjectief welzijn"
+        ]
+      }
+    },
+    {
+      "id": 9132,
+      "name": "Reza Nazari",
+      "affiliation": "Trimbos-instituut",
+      "doc_ids": [
+        "openresearch:51003",
+        "openresearch:51010"
+      ],
+      "score": 0.69,
+      "metadata": {
+        "expertise": [
+          "Gezondheid",
+          "Sociale cohesie",
+          "Cultuurbeleid"
+        ]
+      }
+    },
+    {
+      "id": 9133,
+      "name": "Wouter Smit",
+      "affiliation": "GGD Amsterdam",
+      "doc_ids": [
+        "openresearch:51007",
+        "openresearch:51009"
+      ],
+      "score": 0.68,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Gezondheid",
+          "Levenstevredenheid"
+        ]
+      }
+    },
+    {
+      "id": 9134,
+      "name": "Dr. Carmen Lopez",
+      "affiliation": "Hogeschool van Amsterdam — Urban Vitality",
+      "doc_ids": [
+        "openresearch:51009"
+      ],
+      "score": 0.67,
+      "metadata": {
+        "expertise": [
+          "Mobiliteit",
+          "Veerkracht"
+        ]
+      }
+    },
+    {
+      "id": 9135,
+      "name": "Liesbeth Vogel",
+      "affiliation": "TU Delft — Faculteit Bouwkunde",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51002",
+        "openresearch:51003"
+      ],
+      "score": 0.66,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Onderwijs",
+          "Veiligheidsbeleid",
+          "Stedelijke ontwikkeling"
+        ]
+      }
+    },
+    {
+      "id": 9136,
+      "name": "Erik de Boer",
+      "affiliation": "SEO Economisch Onderzoek",
+      "doc_ids": [
+        "openresearch:51009",
+        "openresearch:51005"
+      ],
+      "score": 0.65,
+      "metadata": {
+        "expertise": [
+          "Duurzaamheid",
+          "Klimaatadaptatie",
+          "Bezoekerseconomie"
+        ]
+      }
+    },
+    {
+      "id": 9137,
+      "name": "Yasmine Karim",
+      "affiliation": "NSCR",
+      "doc_ids": [
+        "openresearch:51002",
+        "openresearch:51010"
+      ],
+      "score": 0.65,
+      "metadata": {
+        "expertise": [
+          "Buurtbeleving",
+          "Onderwijs",
+          "Werkgelegenheid"
+        ]
+      }
+    },
+    {
+      "id": 9138,
+      "name": "Dr. Pim Hofstra",
+      "affiliation": "Trimbos-instituut",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51003",
+        "openresearch:51002"
+      ],
+      "score": 0.64,
+      "metadata": {
+        "expertise": [
+          "Wonen",
+          "Diversiteit",
+          "Duurzaamheid",
+          "Eenzaamheid"
+        ]
+      }
+    },
+    {
+      "id": 9139,
+      "name": "Mariam Saleh",
+      "affiliation": "Verwey-Jonker Instituut",
+      "doc_ids": [
+        "openresearch:51002",
+        "openresearch:51005"
+      ],
+      "score": 0.63,
+      "metadata": {
+        "expertise": [
+          "Stedelijke ontwikkeling",
+          "Wonen",
+          "Ouderenzorg"
+        ]
+      }
+    },
+    {
+      "id": 9140,
+      "name": "Roel ten Hove",
+      "affiliation": "Universiteit van Amsterdam — Urban Studies",
+      "doc_ids": [
+        "openresearch:51003"
+      ],
+      "score": 0.62,
+      "metadata": {
+        "expertise": [
+          "Mobiliteit",
+          "Wonen"
+        ]
+      }
+    },
+    {
+      "id": 9141,
+      "name": "Dr. Ingrid Houtman",
+      "affiliation": "RIVM",
+      "doc_ids": [
+        "openresearch:51007",
+        "openresearch:51003"
+      ],
+      "score": 0.61,
+      "metadata": {
+        "expertise": [
+          "Sociale cohesie",
+          "Inclusie",
+          "Subjectief welzijn"
+        ]
+      }
+    },
+    {
+      "id": 9142,
+      "name": "Stijn Kooi",
+      "affiliation": "Politie Amsterdam — Analyse & Onderzoek",
+      "doc_ids": [
+        "openresearch:51005"
+      ],
+      "score": 0.6,
+      "metadata": {
+        "expertise": [
+          "Stedelijke ontwikkeling",
+          "Veiligheidsbeleid"
+        ]
+      }
+    },
+    {
+      "id": 9143,
+      "name": "Prof. David Wong",
+      "affiliation": "SEO Economisch Onderzoek",
+      "doc_ids": [
+        "openresearch:51003",
+        "openresearch:51005"
+      ],
+      "score": 0.59,
+      "metadata": {
+        "expertise": [
+          "Levenstevredenheid",
+          "Subjectief welzijn",
+          "Stedelijke ontwikkeling"
+        ]
+      }
+    },
+    {
+      "id": 9144,
+      "name": "Femke Brouwer",
+      "affiliation": "Verwey-Jonker Instituut",
+      "doc_ids": [
+        "openresearch:51005"
+      ],
+      "score": 0.59,
+      "metadata": {
+        "expertise": [
+          "Klimaatadaptatie",
+          "Veiligheidsbeleid"
+        ]
+      }
+    },
+    {
+      "id": 9145,
+      "name": "Hicham Tazi",
+      "affiliation": "NSCR",
+      "doc_ids": [
+        "openresearch:51002",
+        "openresearch:51003",
+        "openresearch:51012"
+      ],
+      "score": 0.58,
+      "metadata": {
+        "expertise": [
+          "Bezoekerseconomie",
+          "Ouderenzorg",
+          "Veiligheidsbeleid",
+          "Veerkracht"
+        ]
+      }
+    },
+    {
+      "id": 9146,
+      "name": "Lotte Kuipers",
+      "affiliation": "Universiteit van Amsterdam — Urban Studies",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51003"
+      ],
+      "score": 0.57,
+      "metadata": {
+        "expertise": [
+          "Mobiliteit",
+          "Sociale cohesie",
+          "Wonen"
+        ]
+      }
+    },
+    {
+      "id": 9147,
+      "name": "Ravi Sharma",
+      "affiliation": "VU Amsterdam — Sociale Wetenschappen",
+      "doc_ids": [
+        "openresearch:51012"
+      ],
+      "score": 0.56,
+      "metadata": {
+        "expertise": [
+          "Stedelijke ontwikkeling",
+          "Werkgelegenheid"
+        ]
+      }
+    },
+    {
+      "id": 9148,
+      "name": "Dr. Brenda Achterberg",
+      "affiliation": "RIVM",
+      "doc_ids": [
+        "openresearch:51003"
+      ],
+      "score": 0.55,
+      "metadata": {
+        "expertise": [
+          "Wonen",
+          "Diversiteit"
+        ]
+      }
+    },
+    {
+      "id": 9149,
+      "name": "Jasper Holtkamp",
+      "affiliation": "RIGO Research en Advies",
+      "doc_ids": [
+        "openresearch:51007"
+      ],
+      "score": 0.54,
+      "metadata": {
+        "expertise": [
+          "Mobiliteit",
+          "Klimaatadaptatie"
+        ]
+      }
+    },
+    {
+      "id": 9150,
+      "name": "Anne-Sophie Roos",
+      "affiliation": "NSCR",
+      "doc_ids": [
+        "openresearch:51003",
+        "openresearch:51007"
+      ],
+      "score": 0.53,
+      "metadata": {
+        "expertise": [
+          "Ouderenzorg",
+          "Inclusie",
+          "Levenstevredenheid"
+        ]
+      }
+    },
+    {
+      "id": 9151,
+      "name": "Mounir el-Amri",
+      "affiliation": "RIVM",
+      "doc_ids": [
+        "openresearch:51003"
+      ],
+      "score": 0.53,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Levenstevredenheid"
+        ]
+      }
+    },
+    {
+      "id": 9152,
+      "name": "Dr. Hannah Beerens",
+      "affiliation": "VU Amsterdam — Sociale Wetenschappen",
+      "doc_ids": [
+        "openresearch:51002",
+        "openresearch:51001",
+        "openresearch:51010"
+      ],
+      "score": 0.52,
+      "metadata": {
+        "expertise": [
+          "Cultuurbeleid",
+          "Veiligheidsbeleid",
+          "Sociale cohesie",
+          "Diversiteit"
+        ]
+      }
+    },
+    {
+      "id": 9153,
+      "name": "Olaf Wessels",
+      "affiliation": "VU Amsterdam — Sociale Wetenschappen",
+      "doc_ids": [
+        "openresearch:51007",
+        "openresearch:51005",
+        "openresearch:51010"
+      ],
+      "score": 0.51,
+      "metadata": {
+        "expertise": [
+          "Inclusie",
+          "Levenstevredenheid",
+          "Ouderenzorg",
+          "Klimaatadaptatie"
+        ]
+      }
+    },
+    {
+      "id": 9154,
+      "name": "Mei-Ling Tan",
+      "affiliation": "AMS Institute",
+      "doc_ids": [
+        "openresearch:51001"
+      ],
+      "score": 0.5,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Eenzaamheid"
+        ]
+      }
+    },
+    {
+      "id": 9155,
+      "name": "Prof. Joost Klaassen",
+      "affiliation": "Politie Amsterdam — Analyse & Onderzoek",
+      "doc_ids": [
+        "openresearch:51012"
+      ],
+      "score": 0.49,
+      "metadata": {
+        "expertise": [
+          "Sociale cohesie",
+          "Levenstevredenheid"
+        ]
+      }
+    },
+    {
+      "id": 9156,
+      "name": "Saskia van der Meer",
+      "affiliation": "Movisie",
+      "doc_ids": [
+        "openresearch:51001",
+        "openresearch:51005",
+        "openresearch:51003"
+      ],
+      "score": 0.48,
+      "metadata": {
+        "expertise": [
+          "Subjectief welzijn",
+          "Mobiliteit",
+          "Inkomensongelijkheid",
+          "Mentale gezondheid"
+        ]
+      }
+    },
+    {
+      "id": 9157,
+      "name": "Daniel Berman",
+      "affiliation": "Verwey-Jonker Instituut",
+      "doc_ids": [
+        "openresearch:51002",
+        "openresearch:51001",
+        "openresearch:51005"
+      ],
+      "score": 0.48,
+      "metadata": {
+        "expertise": [
+          "Werkgelegenheid",
+          "Inkomensongelijkheid",
+          "Diversiteit",
+          "Inclusie"
+        ]
+      }
+    },
+    {
+      "id": 9158,
+      "name": "Aysha Iqbal",
+      "affiliation": "AMS Institute",
+      "doc_ids": [
+        "openresearch:51010",
+        "openresearch:51003",
+        "openresearch:51002"
+      ],
+      "score": 0.47,
+      "metadata": {
+        "expertise": [
+          "Brede welvaart",
+          "Wonen",
+          "Mobiliteit",
+          "Eenzaamheid"
+        ]
+      }
+    },
+    {
+      "id": 9159,
+      "name": "Tom Velthuis",
+      "affiliation": "Atlas Research",
+      "doc_ids": [
+        "openresearch:51002",
+        "openresearch:51009",
+        "openresearch:51010"
+      ],
+      "score": 0.46,
+      "metadata": {
+        "expertise": [
+          "Veiligheidsbeleid",
+          "Brede welvaart",
+          "Stedelijke ontwikkeling",
+          "Gezondheid"
+        ]
+      }
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "Spreiding en piekdruk in de binnenstad",
+      "description": "Bezoekersstromen concentreren zich in een handvol straten en pieken in het zomerseizoen. Ruimtelijke spreiding vraagt om afspraken met vervoerders, evenementenbeleid en herinrichting van knooppunten.",
+      "themes": [
+        "ruimtelijke-samenhang-en-kwaliteit",
+        "subjectief-welzijn"
+      ],
+      "supporting_doc_ids": [
+        "openresearch:51001",
+        "openresearch:51002",
+        "openresearch:51007"
+      ]
+    },
+    {
+      "topic": "Banen versus baanzekerheid",
+      "description": "De sector levert veel laagdrempelige werkgelegenheid op, maar de gemiddelde baan kent lage doorgroei en hoge tijdelijkheid. Inzet op opleiding en sociale zekerheid is een open beleidsvraag.",
+      "themes": [
+        "consumptie-en-inkomen",
+        "onderwijs-en-opleiding"
+      ],
+      "supporting_doc_ids": [
+        "openresearch:51003",
+        "openresearch:51012"
+      ]
+    },
+    {
+      "topic": "Belastinginkomsten en gedragssturing",
+      "description": "Toeristenbelasting genereert significante inkomsten maar laat het gedrag van bezoekers nauwelijks zien veranderen. Combineren met tijd- of plaatsgebonden tarieven is een mogelijke route.",
+      "themes": [
+        "economisch-kapitaal"
+      ],
+      "supporting_doc_ids": [
+        "openresearch:51004",
+        "openresearch:51011"
+      ]
+    },
+    {
+      "topic": "Bewonersparticipatie en vertrouwen",
+      "description": "Bewoners in zwaar bezochte buurten voelen zich onvoldoende gehoord. Versterken van wijkgerichte zeggenschap kan vertrouwen in de gemeente herstellen.",
+      "themes": [
+        "sociaal-kapitaal",
+        "subjectief-welzijn"
+      ],
+      "supporting_doc_ids": [
+        "openresearch:51005"
+      ]
+    },
+    {
+      "topic": "Cultureel aanbod als afhankelijke variabele",
+      "description": "Bezoekers houden cultureel aanbod overeind, maar verschuiven de programmering. Bewoners ervaren minder ruimte voor lokaal en experimenteel aanbod.",
+      "themes": [
+        "sociaal-kapitaal"
+      ],
+      "supporting_doc_ids": [
+        "openresearch:51006"
+      ]
+    },
+    {
+      "topic": "Druk op de woningmarkt door vakantieverhuur",
+      "description": "Korte verhuur vermindert het aanbod permanente woningen in concentratiegebieden. Handhaving en woninggerichte alternatieven blijven politiek beladen.",
+      "themes": [
+        "wonen"
+      ],
+      "supporting_doc_ids": [
+        "openresearch:51009"
+      ]
+    }
+  ]
+}

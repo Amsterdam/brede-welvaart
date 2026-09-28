@@ -1,0 +1,64 @@
+packages:
+  - apps/backend
+  - apps/frontend
+  - apps/pdf-frontend
+  - apps/ai-service
+  - apps/ai-service-mock
+  - apps/shared/types
+  - apps/shared/ui
+
+catalog:
+  '@azure/msal-react': 5.5.5
+  vite: 8.2.1
+  graphql: 16.14.2
+  typescript: 6.0.3
+  ts-node: 10.9.2
+  eslint: ^9.39.2
+  eslint-config-prettier: ^10.1.8
+  eslint-plugin-prettier: ^5.5.6
+  '@eslint/js': ^9.39.2
+  '@types/node': ^24.10.1
+  '@types/lodash': ^4.17.25
+  lodash: ^4.18.1
+  tsx: ^4.23.12
+  prettier: ^3.9.6
+  '@amsterdam/design-system-react': ^4.4.0
+
+injectWorkspacePackages: true
+
+allowBuilds:
+  '@apollo/protobufjs': true
+  '@parcel/watcher': true
+  canvas: false
+  esbuild: true
+  mongodb-memory-server: true
+  protobufjs: true
+  puppeteer: true
+  unrs-resolver: false
+
+overrides:
+  '@amsterdam/design-system-react': ^4.4.0
+  '@azure/msal-react': 5.5.5
+  '@opentelemetry/otlp-transformer>protobufjs': ^8.3.0
+  '@opentelemetry/propagator-jaeger': ^2.9.0
+  '@types/node': ^24.10.1
+  axios: ^1.18.0
+  browserslist: ^4.28.7
+  'brace-expansion@1': ^1.1.18
+  'brace-expansion@2': ^2.1.4
+  'brace-expansion@5': ^5.0.9
+  form-data: ^4.0.6
+  immutable: ^5.1.8
+  ip-address: ^10.3.1
+  'js-yaml@3': ^3.15.2
+  'js-yaml@4': ^4.3.2
+  'nanoid@3': ^3.3.18
+  rollup: ^4.60.3
+  typescript: 6.0.3
+
+auditConfig:
+  ignoreGhsas:
+    # react-router RSC-mode server-action CSRF; patched only in v8. This app is
+    # a client-side Vite SPA (no RSC / server actions), so the vulnerable code
+    # path is unreachable. Remove when react-router-dom moves to >=8.3.0.
+    - GHSA-qwww-vcr4-c8h2

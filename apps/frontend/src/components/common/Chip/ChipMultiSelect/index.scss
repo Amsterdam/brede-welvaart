@@ -1,0 +1,23 @@
+.chip-multi-select {
+	position: relative;
+	width: fit-content;
+	padding: 3px 12px;
+	box-sizing: border-box;
+	border: 1px solid var(--ams-color-separator);
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	&-selected {
+		background: var(--ams-color-interactive-5);
+		border-color: var(--ams-color-interactive);
+	}
+
+	span {
+		color: var(--ams-color-interactive-secondary);
+		font-size: 16px;
+		line-height: 20px;
+	}
+}

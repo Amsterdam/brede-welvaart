@@ -1,0 +1,19 @@
+# system.yaml
+# Example descriptions of use cases for creating a
+# Brede Welvaart Scan at the City of Amsterdam.
+#
+# When adapting this to your environment, replace all values
+# with the ones relevant for your organisation.
+#
+# Original author: Diederik Roijers, City of Amsterdam
+# Content last updated: 2025
+
+bezoekerseconomie:
+  nl: >-
+    Wat is de impact van de bezoekerseconomie (toerisme) op brede welvaart?
+    Wij zijn hierbij geïnteresseerd in impact van toeristische bezoekers (dag- en meerdaagse bezoeken).
+    De bredere internationalisering van de stad valt buiten de scope.
+  en: >-
+    What is the impact of the visitor economy (tourism) on broad welfare?
+    We are interested in the impact of tourist visitors (day and multi-day visits).
+    The broader internationalization of the city is outside the scope.

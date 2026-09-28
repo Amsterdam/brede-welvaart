@@ -1,0 +1,62 @@
+.comment-bubble {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	background: var(--ams-color-interactive);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+
+	&-initials {
+		width: 24px;
+		height: 24px;
+		background: var(--white);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			font-size: 14px;
+			color: var(--ams-color-interactive);
+		}
+	}
+
+	&-unread-dot {
+		position: absolute;
+		top: -3px;
+		right: -3px;
+		width: 10px;
+		height: 10px;
+		background: var(--ams-color-feedback-error, #ec0000);
+		border: 2px solid var(--white);
+		border-radius: 50%;
+		animation: unread-dot-appear 0.2s ease-out;
+	}
+
+	&.resolved {
+		background-color: var(--ams-color-separator);
+
+		span {
+			color: var(--ams-color-separator);
+		}
+	}
+
+	&.draft {
+		// background: color-mix(in srgb, var(--ams-color-interactive) 65%, white);
+	}
+}
+
+@keyframes unread-dot-appear {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}

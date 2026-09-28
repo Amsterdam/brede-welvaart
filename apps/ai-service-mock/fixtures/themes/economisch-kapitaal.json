@@ -1,0 +1,109 @@
+{
+  "sources": [
+    {
+      "doc_id": "openresearch:54001",
+      "title": "Bijdrage van de bezoekerseconomie aan het Amsterdams BRP",
+      "content": "Macro-economische schatting van directe en indirecte toegevoegde waarde van bezoekers (toeristen + zakelijke bezoekers + dagjesmensen). Bandbreedte 7-9% van regionaal product.",
+      "url": "https://openresearch.amsterdam/nl/page/54001",
+      "score": 0.94,
+      "chunk_type": "summary",
+      "published_at": "2024-05-28T00:00:00Z",
+      "category": "economisch_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:54002",
+      "title": "Werkgelegenheidsstructuur in horeca en hospitality",
+      "content": "Analyse van 12.000 banen. Sector kent veel laagdrempelige instroom, beperkte doorgroei en hoge tijdelijkheid.",
+      "url": "https://openresearch.amsterdam/nl/page/54002",
+      "score": 0.89,
+      "chunk_type": "section",
+      "published_at": "2024-01-22T00:00:00Z",
+      "category": "economisch_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:54003",
+      "title": "Toeristenbelasting in vergelijkend perspectief",
+      "content": "Internationale vergelijking van toeristenheffingen in Europese hoofdsteden. Amsterdam zit in de top-3 tarieven; gedragssturing blijft beperkt.",
+      "url": "https://openresearch.amsterdam/nl/page/54003",
+      "score": 0.86,
+      "chunk_type": "body",
+      "published_at": "2024-06-15T00:00:00Z",
+      "category": "economisch_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:54004",
+      "title": "Bedrijfsvestigingen in toeristisch profiel",
+      "content": "Inventarisatie van retail en horeca in het centrum. Aanbod verschuift van bewonersfuncties naar bezoekersfuncties; eerstelijnsvoorzieningen onder druk.",
+      "url": "https://openresearch.amsterdam/nl/page/54004",
+      "score": 0.82,
+      "chunk_type": "summary",
+      "published_at": "2023-10-15T00:00:00Z",
+      "category": "economisch_kapitaal"
+    },
+    {
+      "doc_id": "openresearch:54005",
+      "title": "Spillover-effecten naar regiogemeenten",
+      "content": "Bezoekers verblijven steeds vaker in regiogemeenten en pendelen Amsterdam in. Economische baten en lasten verschuiven mee.",
+      "url": "https://openresearch.amsterdam/nl/page/54005",
+      "score": 0.78,
+      "chunk_type": "section",
+      "published_at": "2024-03-04T00:00:00Z",
+      "category": "economisch_kapitaal"
+    }
+  ],
+  "authors": [
+    {
+      "id": 9401,
+      "name": "Prof. Karim el-Hassan",
+      "affiliation": "Erasmus School of Economics",
+      "doc_ids": ["openresearch:54001", "openresearch:54003"],
+      "score": 0.94
+    },
+    {
+      "id": 9402,
+      "name": "Femke Bos",
+      "affiliation": "Gemeente Amsterdam — OIS",
+      "doc_ids": ["openresearch:54002"],
+      "score": 0.89
+    },
+    {
+      "id": 9403,
+      "name": "Dr. Hugo van Beek",
+      "affiliation": "Centraal Planbureau",
+      "doc_ids": ["openresearch:54004", "openresearch:54005"],
+      "score": 0.83
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "Strategische waarde voor de regionale economie",
+      "description": "Bezoekers leveren een aanzienlijk deel van het regionaal product. Volledige afbouw is geen realistische beleidsoptie; sturing wel.",
+      "themes": ["economisch-kapitaal"],
+      "supporting_doc_ids": ["openresearch:54001"]
+    },
+    {
+      "topic": "Kwaliteit van werkgelegenheid",
+      "description": "Veel banen, weinig zekerheid. Sector vraagt om aanvullend beleid op scholing, doorstroom en sociaal vangnet.",
+      "themes": ["economisch-kapitaal", "consumptie-en-inkomen"],
+      "supporting_doc_ids": ["openresearch:54002"]
+    },
+    {
+      "topic": "Tarifering en gedragssturing",
+      "description": "Hoge toeristenbelasting genereert inkomsten maar beïnvloedt gedrag nauwelijks. Plek- of tijdgebonden differentiatie is onderbenut.",
+      "themes": ["economisch-kapitaal"],
+      "supporting_doc_ids": ["openresearch:54003"]
+    },
+    {
+      "topic": "Verschuiving in voorzieningenaanbod",
+      "description": "Bewonersvoorzieningen verdwijnen ten gunste van bezoekersvoorzieningen. Vraagt om actief beleid op brancheringsmix.",
+      "themes": ["economisch-kapitaal", "ruimtelijke-samenhang-en-kwaliteit"],
+      "supporting_doc_ids": ["openresearch:54004"]
+    },
+    {
+      "topic": "Regionale herverdeling van lasten en baten",
+      "description": "Regiogemeenten profiteren van overnachtingsinkomsten terwijl Amsterdam de lasten draagt. Regionale afspraken zijn een open vraag.",
+      "themes": ["economisch-kapitaal"],
+      "supporting_doc_ids": ["openresearch:54005"]
+    }
+  ]
+}

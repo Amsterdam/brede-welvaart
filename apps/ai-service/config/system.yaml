@@ -1,0 +1,15 @@
+# system.yaml
+# System configuration for the AI Service in the
+# Brede Welvaart Scan at the City of Amsterdam.
+#
+# When adapting this to your environment, replace all values
+# with the ones relevant for your organisation.
+#
+# Original author: Diederik Roijers, City of Amsterdam
+# Content last updated: 2025
+
+organization:
+  nl: Gemeente Amsterdam
+  en: City of Amsterdam
+
+reply_language: nl

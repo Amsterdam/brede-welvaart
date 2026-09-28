@@ -1,0 +1,13 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"noEmit": false,
+		"outDir": "./dist",
+		"paths": {
+			"@shared/types": ["../shared/types/dist"],
+			"@shared/types/*": ["../shared/types/dist/*"],
+			"@shared/ui": ["../shared/ui/dist"],
+			"@shared/ui/*": ["../shared/ui/dist/*"]
+		}
+	}
+}
