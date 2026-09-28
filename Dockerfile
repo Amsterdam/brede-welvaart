@@ -1,4 +1,4 @@
-FROM node:24.18.1-slim AS base
+FROM node:24.21.0-slim AS base
 
 # Set up non-root user and safe cache locations
 ENV APP_HOME="/app"
