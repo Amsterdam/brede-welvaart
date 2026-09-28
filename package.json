@@ -32,12 +32,12 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.4",
-    "globals": "^17.11.0",
-    "skills": "^1.5.22",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.12.0",
+    "skills": "^1.7.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "catalog:",
-    "turbo": "^2.10.9",
+    "turbo": "^2.11.4",
     "wait-on": "^9.1.0"
   },
   "repository": {
