@@ -23,26 +23,26 @@
   "license": "EUPL-1.2",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
-    "@amsterdam/design-system-assets": "^2.6.0",
-    "@amsterdam/design-system-css": "^4.4.0",
+    "@amsterdam/design-system-assets": "^2.7.0",
+    "@amsterdam/design-system-css": "^4.5.0",
     "@amsterdam/design-system-react": "catalog:",
-    "@amsterdam/design-system-react-icons": "^2.2.0",
-    "@amsterdam/design-system-tokens": "^4.3.0",
-    "@apollo/client": "^4.2.12",
-    "@azure/msal-browser": "^5.18.0",
+    "@amsterdam/design-system-react-icons": "^2.3.0",
+    "@amsterdam/design-system-tokens": "^4.4.0",
+    "@apollo/client": "^4.3.5",
+    "@azure/msal-browser": "^5.26.0",
     "@azure/msal-react": "catalog:",
-    "@microsoft/applicationinsights-react-js": "^19.4.1",
-    "@microsoft/applicationinsights-web": "^3.4.3",
+    "@microsoft/applicationinsights-react-js": "^19.4.2",
+    "@microsoft/applicationinsights-web": "^3.4.5",
     "@microsoft/clarity": "^1.0.2",
     "@shared/types": "workspace:*",
     "@types/lodash": "catalog:",
     "lodash": "catalog:",
-    "react": "^19.2.8"
+    "react": "^19.3.1"
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "typescript": "catalog:"
   },
   "peerDependencies": {
