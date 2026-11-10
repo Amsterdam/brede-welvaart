@@ -37,7 +37,7 @@
     "graphql-tag": "^2.12.7",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.5.0",
-    "mongoose": "^9.9.2",
+    "mongoose": "^9.11.4",
     "node-fetch": "^3.3.2",
     "pdf-merger-js": "^5.1.2",
     "puppeteer": "^25.7.0",

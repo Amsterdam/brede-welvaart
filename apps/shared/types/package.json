@@ -30,6 +30,6 @@
     "@graphql-tools/merge": "^9.2.3",
     "graphql": "catalog:",
     "mongodb": "^7.5.0",
-    "mongoose": "^9.9.2"
+    "mongoose": "^9.11.4"
   }
 }
