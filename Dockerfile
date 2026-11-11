@@ -194,16 +194,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
 # Install CA certificates — required for TLS connections to Azure services
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    bind9-dnsutils \
     ca-certificates \
-    curl \
-    iproute2 \
-    iputils-ping \
-    jq \
-    netcat-openbsd \
-    openssl \
-    procps \
-    traceroute \
     && update-ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
@@ -211,6 +202,9 @@ ENV UV_NO_DEV=1
 # Fail the build loudly on a base/requires-python mismatch instead of letting
 # uv download a managed interpreter that only root can read.
 ENV UV_PYTHON_DOWNLOADS=never
+# No uv cache in the image: it would keep a second copy of every wheel.
+ENV UV_NO_CACHE=1
+ENV PATH="/app/.venv/bin:$PATH"
 
 RUN groupadd --gid 1001 appgroup && \
     useradd --uid 1001 --gid appgroup --shell /bin/bash --create-home appuser
@@ -229,19 +223,21 @@ RUN uv sync --frozen --no-install-project
 # so skip tableformer/OCR/vision models to keep the image lean. Consumed offline
 # at runtime via DOCLING_ARTIFACTS_PATH (see extractor.py + manifests).
 ENV DOCLING_ARTIFACTS_PATH=/app/models/docling
-RUN uv run python -c "from pathlib import Path; from docling.utils.model_downloader import download_models; download_models(output_dir=Path('/app/models/docling'), with_layout=True, with_tableformer=False, with_code_formula=False, with_picture_classifier=False, with_rapidocr=False, with_easyocr=False)"
+RUN python -c "from pathlib import Path; from docling.utils.model_downloader import download_models; download_models(output_dir=Path('/app/models/docling'), with_layout=True, with_tableformer=False, with_code_formula=False, with_picture_classifier=False, with_rapidocr=False, with_easyocr=False)" \
+    && chown -R appuser:appgroup /app/models
 
-COPY apps/ai-service/main.py ./
-COPY apps/ai-service/src/ ./src/
-COPY apps/ai-service/config/ ./config/
+COPY --chown=appuser:appgroup apps/ai-service/main.py ./
+COPY --chown=appuser:appgroup apps/ai-service/src/ ./src/
+COPY --chown=appuser:appgroup apps/ai-service/config/ ./config/
 
-RUN mkdir -p /app/data && \
-    mkdir -p /tmp/ai-service && \
-    chown -R appuser:appgroup /tmp/ai-service && \
-    chown -R appuser:appgroup /app/models && \
-    chown -R appuser:appgroup /app
+# Only the paths the service writes to. A chown -R of /app would copy the whole
+# .venv into a new layer and double the image size.
+RUN mkdir -p /app/data /tmp/ai-service && \
+    chown appuser:appgroup /app /app/data /tmp/ai-service
 
 USER appuser
 EXPOSE 8000
 
-CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1", "--log-level", "info"]
+# Straight from the venv: uv run would try to lock and sync the root-owned .venv
+# as appuser at every start.
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1", "--log-level", "info"]

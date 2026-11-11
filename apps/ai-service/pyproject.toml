@@ -78,3 +78,14 @@ asyncio_mode = "auto"
 # transformers is transitive (sentence-transformers). Without the floor uv keeps
 # the macOS fork on 5.8.x, which pip-audit flags (PYSEC-2026-3929, fixed 5.10.0).
 constraint-dependencies = ["transformers>=5.10.0"]
+
+# CPU-only torch on Linux. PyPI's Linux wheels bundle CUDA (~45 nvidia-* packages,
+# several GB) that the service never uses: it runs on CPU nodes. macOS keeps PyPI.
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+torchvision = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
