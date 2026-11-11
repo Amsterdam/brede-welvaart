@@ -33,7 +33,7 @@
     "express": "^5.2.1",
     "express-rate-limit": "^8.6.2",
     "graphql": "catalog:",
-    "graphql-scalars": "^1.26.0",
+    "graphql-scalars": "^2.0.1",
     "graphql-tag": "^2.12.7",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.5.0",
