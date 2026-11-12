@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import { describe, it, expect, beforeEach } from 'vitest';
 import mongoose from 'mongoose';
 import { createTestServer, executeOperation } from '../utils/testServer';
 import { Theme } from '../../models/Theme';

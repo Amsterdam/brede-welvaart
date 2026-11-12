@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, jest } from '@jest/globals';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import mongoose from 'mongoose';
 import { Project } from '../../models/Project';
 import { defaultAiServiceClient } from '../../lib/aiServiceClient';
@@ -101,7 +101,7 @@ const waitFor = async (assertion: () => void | Promise<void>, timeoutMs = 1000) 
 
 describe('Project AI analysis', () => {
   afterEach(() => {
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   it('returns an empty dashboard state before analysis has started', async () => {
@@ -144,7 +144,7 @@ describe('Project AI analysis', () => {
     const analysisPromise = new Promise(resolve => {
       resolveAnalysis = resolve;
     });
-    const analyzeProjectStream = jest
+    const analyzeProjectStream = vi
       .spyOn(defaultAiServiceClient, 'analyzeProjectStream')
       .mockReturnValue(analysisPromise as any);
     const server = createTestServer();
@@ -217,7 +217,7 @@ describe('Project AI analysis', () => {
   it('does not send a theme to the AI service (project-level verkenning)', async () => {
     const user = createMockUser();
     const project = await createProject(user.id);
-    const analyzeProjectStream = jest
+    const analyzeProjectStream = vi
       .spyOn(defaultAiServiceClient, 'analyzeProjectStream')
       .mockResolvedValue({ project_id: project._id.toString(), ...MOCK_AI_RESPONSE });
     const server = createTestServer();
@@ -243,7 +243,7 @@ describe('Project AI analysis', () => {
     const project = await createProject(user.id, {
       themes: CANONICAL_THEMES,
     });
-    jest
+    vi
       .spyOn(defaultAiServiceClient, 'analyzeProjectStream')
       .mockResolvedValue({
         project_id: project._id.toString(),
@@ -332,12 +332,12 @@ describe('Project AI analysis', () => {
   it('persists failed analysis state when the AI service fails', async () => {
     const user = createMockUser();
     const project = await createProject(user.id);
-    jest.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.spyOn(console, 'error').mockImplementation(() => undefined);
     let rejectAnalysis: (error: Error) => void = () => {};
     const analysisPromise = new Promise((_, reject) => {
       rejectAnalysis = reject;
     });
-    jest
+    vi
       .spyOn(defaultAiServiceClient, 'analyzeProjectStream')
       .mockReturnValue(analysisPromise as any);
     const server = createTestServer();
@@ -471,7 +471,7 @@ describe('Project AI analysis', () => {
   it('restarting the analysis replaces the single project-level entry', async () => {
     const user = createMockUser();
     const project = await createProject(user.id);
-    jest
+    vi
       .spyOn(defaultAiServiceClient, 'analyzeProjectStream')
       .mockResolvedValue({ project_id: project._id.toString(), ...MOCK_AI_RESPONSE });
     const server = createTestServer();
@@ -500,7 +500,7 @@ describe('Project AI analysis', () => {
   it('searchQuestion override propagates into stored generatedQuestion', async () => {
     const user = createMockUser();
     const project = await createProject(user.id);
-    const analyzeProjectStream = jest
+    const analyzeProjectStream = vi
       .spyOn(defaultAiServiceClient, 'analyzeProjectStream')
       .mockResolvedValue({ project_id: project._id.toString(), ...MOCK_AI_RESPONSE });
     const server = createTestServer();
@@ -545,7 +545,7 @@ describe('Project AI analysis', () => {
     const owner = createMockUser();
     const stranger = createMockUser();
     const project = await createProject(owner.id);
-    jest.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.spyOn(console, 'error').mockImplementation(() => undefined);
     const server = createTestServer();
 
     const response = await executeOperation(

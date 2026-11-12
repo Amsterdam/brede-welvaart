@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, jest } from '@jest/globals';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import mongoose from 'mongoose';
 import { Project } from '../../models/Project';
 import { SourceEffectCache, ISourceEffectStatement } from '../../models/SourceEffectCache';
@@ -43,7 +43,7 @@ const statementsOf = (response: any) =>
 
 describe('openResearchSourceEffects caching', () => {
   afterEach(() => {
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   it('stores statements and reuses them without re-calling the AI service', async () => {
@@ -51,7 +51,7 @@ describe('openResearchSourceEffects caching', () => {
     const project = await createProject(user.id);
     const server = createTestServer();
 
-    const findStatements = jest
+    const findStatements = vi
       .spyOn(defaultAiServiceClient, 'findStatements')
       .mockResolvedValue([
         { text: 'Effect A', page: 3 },
@@ -79,7 +79,7 @@ describe('openResearchSourceEffects caching', () => {
     const project = await createProject(user.id);
     const server = createTestServer();
 
-    const findStatements = jest
+    const findStatements = vi
       .spyOn(defaultAiServiceClient, 'findStatements')
       .mockResolvedValueOnce([{ text: 'Old', page: 1 }] as any)
       .mockResolvedValueOnce([{ text: 'New', page: 2 }] as any);
@@ -109,7 +109,7 @@ describe('openResearchSourceEffects caching', () => {
     const project = await createProject(user.id);
     const server = createTestServer();
 
-    jest.spyOn(defaultAiServiceClient, 'findStatements').mockRejectedValue(
+    vi.spyOn(defaultAiServiceClient, 'findStatements').mockRejectedValue(
       new Error('AI service returned 502')
     );
 

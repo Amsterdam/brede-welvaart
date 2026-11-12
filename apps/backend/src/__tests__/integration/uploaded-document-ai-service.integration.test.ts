@@ -1,16 +1,16 @@
-import { afterAll, beforeAll, beforeEach, describe, expect, it, jest } from '@jest/globals';
+import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'http';
 import type { AddressInfo } from 'net';
 import mongoose from 'mongoose';
 import { deleteProjectDocumentBlob, uploadProjectDocumentBlob } from '../../lib/projectDocumentStorage';
 import type { TestUser } from '../utils/testServer';
 
-jest.mock('../../lib/projectDocumentStorage', () => ({
-  buildProjectDocumentBlobPath: jest.fn((projectId: string, documentId: string) =>
+vi.mock('../../lib/projectDocumentStorage', () => ({
+  buildProjectDocumentBlobPath: vi.fn((projectId: string, documentId: string) =>
     `uploads/${projectId}/documents/${documentId}/original.pdf`
   ),
-  uploadProjectDocumentBlob: jest.fn(),
-  deleteProjectDocumentBlob: jest.fn(),
+  uploadProjectDocumentBlob: vi.fn(),
+  deleteProjectDocumentBlob: vi.fn(),
 }));
 
 type TestServerModule = typeof import('../utils/testServer');
@@ -245,7 +245,7 @@ beforeEach(() => {
       ],
     },
   };
-  jest.clearAllMocks();
+  vi.clearAllMocks();
 });
 
 describe('uploaded document AI-service integration', () => {
@@ -342,7 +342,7 @@ describe('uploaded document AI-service integration', () => {
   });
 
   it('keeps the upload retrievable and marks analysis failed when the AI service rejects the document', async () => {
-    const consoleError = jest.spyOn(console, 'error').mockImplementation(() => undefined);
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     nextAiServiceResponse = {
       status: 422,
       body: { detail: 'Document analysis failed.' },
