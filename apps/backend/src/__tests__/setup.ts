@@ -1,6 +1,6 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
-import { beforeAll, afterAll, beforeEach } from '@jest/globals';
+import { beforeAll, afterAll, beforeEach } from 'vitest';
 
 let mongod: MongoMemoryServer | undefined;
 

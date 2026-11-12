@@ -1,5 +1,16 @@
 version: 2
 
+# Version updates and security updates are configured separately:
+# - The `version-updates` groups and the semver-major `ignore` rules only shape the
+#   weekly version-update PRs. Dependabot applies just the `versions` part of an
+#   ignore rule to security updates, never `update-types`, so security fixes that
+#   need a major bump are still raised.
+# - Each ecosystem also has a `security-updates` group with no `update-types`
+#   filter. All open alerts for that ecosystem then land in one PR, at whatever
+#   semver level the fix needs, so the PR can pass the CI audit gate on its own.
+#   Without it every vulnerable package gets its own PR, and each one fails the
+#   audit on the alerts it does not fix.
+
 updates:
   - package-ecosystem: github-actions
     directory: /
@@ -11,11 +22,16 @@ updates:
     open-pull-requests-limit: 5
     groups:
       github-actions:
+        applies-to: version-updates
         patterns:
           - "*"
         update-types:
           - minor
           - patch
+      github-actions-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
     ignore:
       - dependency-name: "*"
         update-types:
@@ -31,15 +47,27 @@ updates:
     open-pull-requests-limit: 5
     groups:
       pnpm-dependencies:
+        applies-to: version-updates
         patterns:
           - "*"
         update-types:
           - minor
           - patch
+      pnpm-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
     ignore:
       - dependency-name: "*"
         update-types:
           - version-update:semver-major
+      # 5.5.2 caps @graphql-tools/utils below 12.0.2 (for Node 20 installs), which
+      # brings back GHSA-c4qx-w738-7hr3 and fails the audit gate. 5.5.1 accepts the
+      # patched utils. Only this exact version: `versions` ignores also apply to
+      # security updates.
+      - dependency-name: "@apollo/server"
+        versions:
+          - "5.5.2"
 
   - package-ecosystem: uv
     directory: /apps/ai-service
@@ -51,11 +79,16 @@ updates:
     open-pull-requests-limit: 5
     groups:
       ai-service-dependencies:
+        applies-to: version-updates
         patterns:
           - "*"
         update-types:
           - minor
           - patch
+      ai-service-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
     ignore:
       - dependency-name: "*"
         update-types:
@@ -71,11 +104,16 @@ updates:
     open-pull-requests-limit: 5
     groups:
       container-images:
+        applies-to: version-updates
         patterns:
           - "*"
         update-types:
           - minor
           - patch
+      container-images-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
     ignore:
       - dependency-name: "*"
         update-types:
@@ -98,11 +136,16 @@ updates:
     open-pull-requests-limit: 5
     groups:
       mock-container-images:
+        applies-to: version-updates
         patterns:
           - "*"
         update-types:
           - minor
           - patch
+      mock-container-images-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
     ignore:
       - dependency-name: "*"
         update-types:

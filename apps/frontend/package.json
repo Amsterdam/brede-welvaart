@@ -26,7 +26,7 @@
 		"graphql": "catalog:",
 		"less": "^4.9.0",
 		"lodash": "catalog:",
-		"moment": "^2.30.1",
+		"moment": "^2.31.0",
 		"moment-timezone": "^0.6.3",
 		"rc-mentions": "^2.20.0",
 		"react": "^19.2.8",
@@ -56,7 +56,7 @@
 		"globals": "^17.11.0",
 		"prettier": "catalog:",
 		"typescript": "catalog:",
-		"vite": "^8.2.1",
-		"vitest": "^4.1.11"
+		"vite": "catalog:",
+		"vitest": "^4.1.12"
 	}
 }

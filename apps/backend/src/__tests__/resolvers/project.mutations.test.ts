@@ -1,25 +1,25 @@
-import { beforeEach, describe, it, expect, jest } from '@jest/globals';
+import { beforeEach, describe, it, expect, vi } from 'vitest';
 import mongoose from 'mongoose';
 import { createTestServer, executeOperation, TestUser } from '../utils/testServer';
 import { Project } from '../../models/Project';
 import { deleteProjectDocumentBlob, uploadProjectDocumentBlob } from '../../lib/projectDocumentStorage';
 import { defaultAiServiceClient, mapProjectToAiServiceInput } from '../../lib/aiServiceClient';
 
-jest.mock('../../lib/projectDocumentStorage', () => ({
-  buildProjectDocumentBlobPath: jest.fn((projectId: string, documentId: string) =>
+vi.mock('../../lib/projectDocumentStorage', () => ({
+  buildProjectDocumentBlobPath: vi.fn((projectId: string, documentId: string) =>
     `uploads/${projectId}/documents/${documentId}/original.pdf`
   ),
-  uploadProjectDocumentBlob: jest.fn(),
-  deleteProjectDocumentBlob: jest.fn(),
+  uploadProjectDocumentBlob: vi.fn(),
+  deleteProjectDocumentBlob: vi.fn(),
 }));
 
-jest.mock('../../lib/aiServiceClient', () => ({
+vi.mock('../../lib/aiServiceClient', () => ({
   defaultAiServiceClient: {
-    analyzeDocument: jest.fn(),
-    generateKeyMessage: jest.fn(),
-    getSource: jest.fn(),
+    analyzeDocument: vi.fn(),
+    generateKeyMessage: vi.fn(),
+    getSource: vi.fn(),
   },
-  mapProjectToAiServiceInput: jest.fn((_project: unknown, theme?: string) => ({
+  mapProjectToAiServiceInput: vi.fn((_project: unknown, theme?: string) => ({
     goal: 'Doel',
     motivation: 'Motivatie',
     scope: 'Scope',
@@ -65,12 +65,12 @@ describe('Project Mutations', () => {
   };
 
   beforeEach(() => {
-    jest.clearAllMocks();
-    jest.mocked(defaultAiServiceClient.analyzeDocument).mockResolvedValue({
+    vi.clearAllMocks();
+    vi.mocked(defaultAiServiceClient.analyzeDocument).mockResolvedValue({
       summary: null,
       statements: [],
     });
-    jest.mocked(defaultAiServiceClient.generateKeyMessage).mockResolvedValue('• Conceptboodschap');
+    vi.mocked(defaultAiServiceClient.generateKeyMessage).mockResolvedValue('• Conceptboodschap');
   });
 
   describe('generateProjectKeyMessage', () => {
@@ -540,7 +540,7 @@ describe('Project Mutations', () => {
 
     it('reconstructs the OpenResearch link server-side, ignoring any client-supplied link', async () => {
       const reconstructedUrl = 'https://openresearch.amsterdam/en/page/124398/amsterdamse-ai-agenda';
-      jest.mocked(defaultAiServiceClient.getSource).mockResolvedValue({ url: reconstructedUrl } as any);
+      vi.mocked(defaultAiServiceClient.getSource).mockResolvedValue({ url: reconstructedUrl } as any);
 
       const project = await openResearchProject();
       const server = createTestServer();
@@ -567,7 +567,7 @@ describe('Project Mutations', () => {
     });
 
     it('saves the draft with no link when the source lookup fails', async () => {
-      jest.mocked(defaultAiServiceClient.getSource).mockRejectedValue(new Error('AI service down'));
+      vi.mocked(defaultAiServiceClient.getSource).mockRejectedValue(new Error('AI service down'));
 
       const project = await openResearchProject();
       const server = createTestServer();
@@ -1034,7 +1034,7 @@ describe('Project Mutations', () => {
       const analysisPromise = new Promise(resolve => {
         resolveAnalysis = resolve;
       });
-      jest.mocked(defaultAiServiceClient.analyzeDocument).mockReturnValue(analysisPromise as any);
+      vi.mocked(defaultAiServiceClient.analyzeDocument).mockReturnValue(analysisPromise as any);
 
       const response = await executeOperation(server, mutation, {
         projectId: project._id.toString(),
@@ -1239,7 +1239,7 @@ describe('Project Mutations', () => {
     });
 
     it('returns not found for an unknown document', async () => {
-      jest.spyOn(console, 'error').mockImplementation(() => undefined);
+      vi.spyOn(console, 'error').mockImplementation(() => undefined);
       const project = await projectWithDocument({ slug: 'unknown-doc-project' });
       const server = createTestServer();
 

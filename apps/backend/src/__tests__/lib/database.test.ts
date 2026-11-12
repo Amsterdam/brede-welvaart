@@ -1,12 +1,14 @@
-import { beforeEach, describe, expect, it, jest } from '@jest/globals';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-const getToken = jest.fn<() => Promise<{ token: string }>>();
+// vi.mock factories are hoisted above module-level consts, so share the mock via vi.hoisted.
+const { getToken } = vi.hoisted(() => ({ getToken: vi.fn<() => Promise<{ token: string }>>() }));
 
-jest.mock('@azure/identity', () => ({
-  DefaultAzureCredential: jest.fn(() => ({ getToken })),
+vi.mock('@azure/identity', () => ({
+  // Called with `new`, so the implementation must be a function, not an arrow.
+  DefaultAzureCredential: vi.fn(function () { return { getToken }; }),
 }));
 
-jest.mock('../../config', () => ({
+vi.mock('../../config', () => ({
   __esModule: true,
   default: {
     database: {
@@ -32,14 +34,14 @@ describe('getDatabaseUrl', () => {
     databaseConfig.cosmosConnectionStringUrl = '';
     databaseConfig.name = 'ct-bw-o-db';
     getToken.mockReset();
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   it('uses the Cosmos managed identity configuration before MONGODB_URI', async () => {
     databaseConfig.url = 'mongodb://localhost:27017/ct-bw';
     databaseConfig.cosmosConnectionStringUrl = 'https://management.azure.com/cosmos/listConnectionStrings';
     getToken.mockResolvedValue({ token: 'access-token' });
-    jest.spyOn(global, 'fetch').mockResolvedValue(new Response(JSON.stringify({
+    vi.spyOn(global, 'fetch').mockResolvedValue(new Response(JSON.stringify({
       connectionStrings: [{
         connectionString: 'mongodb://cosmos.example:10255/?ssl=true',
         keyKind: 'Primary',

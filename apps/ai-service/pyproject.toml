@@ -75,9 +75,14 @@ markers = ["integration: live API tests, run manually"]
 asyncio_mode = "auto"
 
 [tool.uv]
-# transformers is transitive (sentence-transformers). Without the floor uv keeps
-# the macOS fork on 5.8.x, which pip-audit flags (PYSEC-2026-3929, fixed 5.10.0).
-constraint-dependencies = ["transformers>=5.10.0"]
+# Floors for transitive deps that resolvers would otherwise keep on vulnerable
+# versions:
+# - transformers (via sentence-transformers): without it uv keeps the macOS fork
+#   on 5.8.x, which pip-audit flags (PYSEC-2026-3929, fixed 5.10.0).
+# - pillow (via docling, sentence-transformers, pdfplumber, ...): 12.x has several
+#   advisories fixed only in 13.0.0. Dependabot version updates skip majors, so
+#   the floor keeps the lock from sliding back below the patched line.
+constraint-dependencies = ["pillow>=13.0.0", "transformers>=5.10.0"]
 
 # CPU-only torch on Linux. PyPI's Linux wheels bundle CUDA (~45 nvidia-* packages,
 # several GB) that the service never uses: it runs on CPU nodes. macOS keeps PyPI.

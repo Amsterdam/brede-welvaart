@@ -50,8 +50,8 @@ pnpm check:python      # ai-service lint + tests
 - **Authorisation lives in resolvers.** Only facilitators edit scan content; reviewers comment.
   Enforce this in the backend, not only in the UI.
 - **No secrets in the repo.** Local settings go in `.env` / `.env.local` files, which are ignored.
-- **Tests.** Add or update tests for behaviour you change. Backend tests use Jest,
-  frontend tests use Vitest, the AI service uses pytest.
+- **Tests.** Add or update tests for behaviour you change. Backend and frontend tests use Vitest,
+  the AI service uses pytest.
 
 ## Security issues
 

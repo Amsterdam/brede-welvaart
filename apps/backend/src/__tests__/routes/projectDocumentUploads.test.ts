@@ -1,7 +1,7 @@
 import express from 'express';
 import request from 'supertest';
 import { rateLimit } from 'express-rate-limit';
-import { beforeEach, describe, expect, it, jest } from '@jest/globals';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { Project } from '../../models/Project';
 import { User } from '../../models/User';
 import {
@@ -12,25 +12,25 @@ import { deleteProjectDocumentBlob, uploadProjectDocumentBlobStream } from '../.
 import { defaultAiServiceClient } from '../../lib/aiServiceClient';
 import { getUserForApi } from '../../lib/auth';
 
-jest.mock('../../lib/projectDocumentStorage', () => ({
-  buildProjectDocumentBlobPath: jest.fn((projectId: string, documentId: string, fileName: string) =>
+vi.mock('../../lib/projectDocumentStorage', () => ({
+  buildProjectDocumentBlobPath: vi.fn((projectId: string, documentId: string, fileName: string) =>
     `uploads/${projectId}/documents/${documentId}/${fileName}`
   ),
-  uploadProjectDocumentBlobStream: jest.fn(({ content }: { content: NodeJS.ReadableStream }) =>
+  uploadProjectDocumentBlobStream: vi.fn(({ content }: { content: NodeJS.ReadableStream }) =>
     new Promise<void>((resolve, reject) => {
       content.on('data', () => undefined);
       content.on('end', resolve);
       content.on('error', reject);
     })
   ),
-  deleteProjectDocumentBlob: jest.fn(),
+  deleteProjectDocumentBlob: vi.fn(),
 }));
 
-jest.mock('../../lib/aiServiceClient', () => ({
+vi.mock('../../lib/aiServiceClient', () => ({
   defaultAiServiceClient: {
-    analyzeDocument: jest.fn(),
+    analyzeDocument: vi.fn(),
   },
-  mapProjectToAiServiceInput: jest.fn((_project: unknown, theme?: string) => ({
+  mapProjectToAiServiceInput: vi.fn((_project: unknown, theme?: string) => ({
     goal: 'Doel',
     motivation: 'Motivatie',
     scope: 'Scope',
@@ -40,14 +40,14 @@ jest.mock('../../lib/aiServiceClient', () => ({
   })),
 }));
 
-jest.mock('../../lib/auth', () => ({
-  verifyToken: jest.fn(),
-  getUserForApi: jest.fn(),
+vi.mock('../../lib/auth', () => ({
+  verifyToken: vi.fn(),
+  getUserForApi: vi.fn(),
 }));
 
-jest.mock('../../lib/serviceToken', () => ({
-  isServiceToken: jest.fn(() => false),
-  verifyServiceToken: jest.fn(),
+vi.mock('../../lib/serviceToken', () => ({
+  isServiceToken: vi.fn(() => false),
+  verifyServiceToken: vi.fn(),
 }));
 
 const waitFor = async (assertion: () => void | Promise<void>, timeoutMs = 1000) => {
@@ -107,15 +107,15 @@ const createOwnerAndProject = async () => {
     uploadedDocuments: [],
   });
 
-  jest.mocked(getUserForApi).mockResolvedValue(owner as any);
+  vi.mocked(getUserForApi).mockResolvedValue(owner as any);
 
   return { owner, project };
 };
 
 describe('project document upload route', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
-    jest.mocked(defaultAiServiceClient.analyzeDocument).mockResolvedValue({
+    vi.clearAllMocks();
+    vi.mocked(defaultAiServiceClient.analyzeDocument).mockResolvedValue({
       summary: null,
       statements: [],
     });
@@ -222,7 +222,7 @@ describe('project document upload route', () => {
       themes: [{ slug: 'wonen', name: 'Wonen', description: 'Wonen description', arguments: [] }],
       uploadedDocuments: [],
     });
-    jest.mocked(getUserForApi).mockResolvedValue(reviewer as any);
+    vi.mocked(getUserForApi).mockResolvedValue(reviewer as any);
 
     const response = await request(createUploadApp())
       .post(`/projects/${project._id.toString()}/upload-document`)

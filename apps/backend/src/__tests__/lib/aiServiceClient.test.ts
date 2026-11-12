@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, jest } from '@jest/globals';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
   AiServiceClientOptions,
   createAiServiceClient,
@@ -9,11 +9,11 @@ type TestFetch = NonNullable<AiServiceClientOptions['fetchImpl']>;
 
 describe('aiServiceClient', () => {
   afterEach(() => {
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   it('posts key message generation to the dedicated endpoint', async () => {
-    const fetchImpl = jest.fn<TestFetch>().mockResolvedValue({
+    const fetchImpl = vi.fn<TestFetch>().mockResolvedValue({
       ok: true,
       json: async () => ({ key_message: '• Een evenwichtige kernboodschap' }),
     } as Response);
@@ -35,7 +35,7 @@ describe('aiServiceClient', () => {
   });
 
   it('posts analysis requests to /bw/analyze', async () => {
-    const fetchImpl = jest.fn<TestFetch>()
+    const fetchImpl = vi.fn<TestFetch>()
       .mockResolvedValue({
         ok: true,
         json: async () => ({ project_id: 'project-1', sources: [] }),
@@ -80,7 +80,7 @@ describe('aiServiceClient', () => {
   });
 
   it('posts uploaded document analysis requests to /bw/analyze-document', async () => {
-    const fetchImpl = jest.fn<TestFetch>()
+    const fetchImpl = vi.fn<TestFetch>()
       .mockResolvedValue({
         ok: true,
         json: async () => ({
@@ -133,8 +133,8 @@ describe('aiServiceClient', () => {
   });
 
   it('raises a typed error for non-successful AI service responses', async () => {
-    const consoleError = jest.spyOn(console, 'error').mockImplementation(() => undefined);
-    const fetchImpl = jest.fn<TestFetch>()
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const fetchImpl = vi.fn<TestFetch>()
       .mockResolvedValue({
         ok: false,
         status: 502,
@@ -173,7 +173,7 @@ describe('aiServiceClient', () => {
   });
 
   it('includes the target URL when AI service fetch fails', async () => {
-    const fetchImpl = jest.fn<TestFetch>()
+    const fetchImpl = vi.fn<TestFetch>()
       .mockRejectedValue(new TypeError('fetch failed'));
     const client = createAiServiceClient({
       baseUrl: 'http://127.0.0.1:8000',
